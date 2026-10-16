@@ -52,7 +52,7 @@ p, h1 { margin: 0; }
 .lede__headline {
   font-size: clamp(32px, 4vw, 56px);
   line-height: 1.05;
-  letter-spacing: -.035em;
+  letter-spacing: -.01em;
   font-weight: 500;
   max-width: 12em;
   text-wrap: balance;
