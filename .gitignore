@@ -1,0 +1,5 @@
+.claude/
+.DS_Store
+# demo exports, not used by the site
+motion-lab-demo.webm
+motion-lab-demo-dribbble.mp4
