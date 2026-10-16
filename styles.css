@@ -277,6 +277,16 @@ html.lenis, html.lenis body { height: auto; }
 .loader__num::after { content: "%"; font-size: .4em; letter-spacing: 0; margin-left: .06em; vertical-align: top; color: var(--mute); }
 .loader.is-done { transform: translateY(-100%); }
 .is-loading, .is-loading body { overflow: hidden; }
+/* as the loader lifts, the page follows it up: header, then each block of the page, a beat apart.
+   Uses the separate `translate` property so it never fights the carousel's scroll-growth transform. */
+@media (prefers-reduced-motion: no-preference) {
+  .js .bar, .js main > * { transition: translate 1.2s cubic-bezier(.16, 1, .3, 1); }
+  .js .bar { transition-delay: .05s; }
+  .js main > :nth-child(1) { transition-delay: .14s; }
+  .js main > :nth-child(2) { transition-delay: .24s; }
+  .js main > :nth-child(3) { transition-delay: .34s; }
+  .is-loading .bar, .is-loading main > * { translate: 0 120px; }
+}
 /* the headline waits for the loader before rising in */
 .is-loading .lede__headline .word, .is-loading .lede__eyebrow { animation-play-state: paused; }
 /* if the script never runs, the loader steps aside on its own */
