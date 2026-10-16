@@ -241,9 +241,9 @@ p, h1 { margin: 0; }
 .shot-frames { display: flex; flex-direction: column; gap: 72px; margin-top: 72px; }
 .shot-frames .line { gap: 24px; }
 /* each section opens with a short group: heading and a few lines, in the text column */
-.shot-group { width: 100%; max-width: var(--text); margin: 56px auto -24px; display: flex; flex-direction: column; gap: 12px; }
+.shot-group { width: 100%; max-width: var(--text); margin: 56px auto -24px; display: flex; flex-direction: column; gap: 16px; }   /* same 16px title-to-text gap as the intro facts */
 .shot-frames > .shot-group:first-child { margin-top: 0; }
-.shot-sec { font-size: 32px; line-height: 40px; font-weight: 500; letter-spacing: -.02em; }
+.shot-sec { margin: 0; font-size: 32px; line-height: 40px; font-weight: 500; letter-spacing: -.02em; }
 .shot-next {
   display: flex;
   flex-direction: column;
