@@ -444,8 +444,9 @@
     // mouse drag: snapping is off while dragging, then the nearest card settles into place
     let down = false, moved = false, x0 = 0, left0 = 0;
     track.addEventListener("pointerdown", (e) => {
+      moved = false;   // every new press starts clean, so a drag that ended off the carousel can't swallow this click
       if (e.pointerType !== "mouse" || e.button !== 0) return;
-      down = true; moved = false; x0 = e.clientX; left0 = track.scrollLeft;
+      down = true; x0 = e.clientX; left0 = track.scrollLeft;
     });
     addEventListener("pointermove", (e) => {
       if (!down) return;
@@ -463,7 +464,7 @@
       track.classList.remove("is-dragging");
       track.scrollTo({ left: target, behavior: "smooth" });
     });
-    track.addEventListener("click", (e) => { if (moved) { e.preventDefault(); moved = false; } }, true);
+    track.addEventListener("click", (e) => { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
     track.addEventListener("dragstart", (e) => e.preventDefault());
   }
 
@@ -540,7 +541,7 @@
         <p class="about__text rise" style="--delay:.1s">${esc(p.text)}</p>
       </section>
       <section class="frames">${lines}</section>
-      <a class="next rise" href="${projectUrl(next)}" data-slug="${esc(next.slug)}">Next <span>${esc(next.name)}</span></a>` };
+      <a class="next rise" href="${projectUrl(next)}" data-slug="${esc(next.slug)}">Next case <span>${esc(next.name)}</span></a>` };
   }
 
   function renderAbout() {
