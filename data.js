@@ -50,7 +50,7 @@ window.SITE = {
         { src: "media/homie/f04-flow.jpg", w: 3840, h: 2160 },
         { src: "media/homie/v08-empty.webm", poster: "media/homie/v08-empty.jpg", w: 1200, h: 1350, video: true, cap: "An empty month in the app." },
         { src: "media/homie/v09-piggy.webm", poster: "media/homie/v09-piggy.jpg", w: 1200, h: 1350, video: true, cap: "The piggy bank, up close." },
-        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160, cap: "The illustration set." },
+        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160, cap: "Illustrations I drew in Figma, then animated with Claude." },
         { src: "media/homie/v10-motion-lab.webm", poster: "media/homie/v10-motion-lab.jpg", w: 1920, h: 1080, video: true, cap: "The whole lab: every animation in the app, its timeline and its curves." },
         { src: "media/homie/sg-color.jpg", w: 3840, h: 2160, cap: "Deep green and lime, plus one color per category." },
         { src: "media/homie/sg-icons.jpg", w: 1920, h: 2160 },
@@ -62,8 +62,8 @@ window.SITE = {
         { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true, cap: "Who owes who, right under the total." },
         { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true, cap: "One button settles the month." },
         // icon set drawn from scratch
-        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160, cap: "The category icons we drew ourselves, two-tone." },
-        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160, cap: "Interface icons: Tabler, and Lucide in the menu, picked with Grok." },
+        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160, cap: "The category icons, drawn in Figma, two-tone." },
+        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160, cap: "The result: Tabler for the interface, Lucide for the menu." },
         { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160, cap: "Every category icon sits on the same 32px grid." },
         // the user flow, animated in the style guide's language
         { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true, cap: "The whole app on one map." },
@@ -82,6 +82,8 @@ window.SITE = {
         { src: "media/homie/f08-voice.jpg", w: 1920, h: 1080 },
         // how the tools connect: Grok → Figma → Claude, built in once
         { src: "media/homie/v18-tools.webm", poster: "media/homie/v18-tools.jpg", w: 1920, h: 1080, video: true, once: true, cap: "Grok shaped the voice and picked icons, Figma held the icons and system, Claude built the app from them." },
+        // the icon libraries we showed the Grok brand manager: our real menu in Phosphor, Lucide and Tabler
+        { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080, cap: "Our real menu, drawn with three libraries side by side, for the Grok bot to compare." },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -90,9 +92,11 @@ window.SITE = {
         [25], [24],
         { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
         [19], [23, 2], [21, 15], [22],
-        { title: "Build the visual language", text: "Pinterest for character, Bit for a friendly, light feel, a Grok bot for the voice and icons, and a full design system in Figma." },
-        [27], [26], [8], [16], [17, 18], [6], [11],
-        { title: "Motion Lab", text: "Tweaking animation numbers in code was slow, so I built a small tool for it. Pick an animation, drag its curves, watch it change live, then save it straight into the app." },
+        { title: "Build the visual language", text: "Pinterest for character, Bit for a friendly, light feel, a Grok bot to shape the voice, and a full design system in Figma." },
+        [27], [26], [8], [6], [11],
+        { title: "Icons, with a Grok brand manager", text: "I drew every category icon myself in Figma, with an icon maker. For the interface we wanted a ready-made library, so I set up a Grok bot as our brand manager, showed it our real menu in three libraries, and picked the one it found closest to our brand." },
+        [16], [28], [17, 18],
+        { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Tweaking the timing in code was slow, so I built a small tool to polish it: pick an animation, drag its curves, watch it change live, then save it straight into the app." },
         [7], [20],
       ],
       // shot page (layout after Dribbble's shot pages)
