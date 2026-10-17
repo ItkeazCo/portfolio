@@ -91,7 +91,7 @@ window.SITE = {
         { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
         [19], [23, 2], [21, 15], [22],
         { title: "Build the visual language", text: "Pinterest for character, Bit for a friendly, light feel, a Grok bot for the voice and icons, and a full design system in Figma." },
-        [26], [27], [8], [16], [17, 18], [6], [20], [11],
+        [27], [26], [8], [16], [17, 18], [6], [20], [11],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
