@@ -95,7 +95,7 @@ window.SITE = {
         [20], [7],
         { title: "Green, lime, one color per category", text: "Rubik, because it reads well in Hebrew and English. Deep green feels like money and calm, a lime accent keeps it playful rather than bank-like, and one color per category makes each one easy to spot." },
         [8], [9, 10],
-        { title: "Draw category icons, let Grok pick the rest", text: "We drew every category icon ourselves with an icon maker inside Figma, since ready-made sets missed things like the shekel. For the interface we used a library: I made a Grok bot that plays our brand manager (it also helped set the brand's tone of voice), showed it the options side by side, and picked the one closest to our brand." },
+        { title: "Draw category icons, let Grok pick the rest", text: "We drew every category icon ourselves with an icon maker inside Figma, since ready-made sets missed things like the shekel. For the interface we used ready-made sets, Tabler and Lucide for the menu: I made a Grok bot that plays our brand manager (it also helped set the brand's tone of voice), showed it the options side by side, and picked the one closest to our brand." },
         [16], [17, 18],
         { title: "One stylesheet for everything", text: "One shared stylesheet, so what's documented is what ships. It also meant Groceries could be built on it from day one." },
         [11], [12], [13],
