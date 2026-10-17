@@ -75,7 +75,7 @@ window.SITE = {
       lines: [
         { title: "The whole app on one page", text: "The whole app in one picture: add a bill with its category, and the month shows what we spent on. Everything is a tap from home, so logging is faster than forgetting." },
         [19],
-        { title: "Add a bill in a few taps", text: "Type the amount, pick what it was for, done. Every bill gets a category so we can see where money goes, and a little coin burst makes logging feel like a win, so we keep doing it." },
+        { title: "Add a bill in a few taps", text: "Type the amount, pick what it was for, done. Every bill gets a category so we can see where money goes, and you watch the money fly away, which makes logging feel like a small, funny win." },
         [1, 2], [3],
         { title: "Settle up with one button", text: "Mostly for us: we always joke about who owes who, so now the app keeps score. One tap shows it, one button settles the month." },
         [14, 15],
