@@ -86,6 +86,7 @@ window.SITE = {
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie · Household Expenses App & Design System",
+      reel: [0, 2, 14, 4, 7, 16],   // the card's short reel on the home page: media indexes, in order
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "Product, UI, design system, motion" },
@@ -127,6 +128,7 @@ window.SITE = {
         [8],
       ],
       shotTitle: "Groceries · Shared Shopping List, built on Homie",
+      reel: [0, 1, 3, 5, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "Product, UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
@@ -182,6 +184,7 @@ window.SITE = {
         [15, 16], [17],
       ],
       shotTitle: "Graphite · Design System & Documentation",
+      reel: [0, 1, 2, 8, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "Design system, docs" },
         { label: "Tools", value: "CSS tokens, JS" },

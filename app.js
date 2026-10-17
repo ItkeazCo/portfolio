@@ -231,19 +231,17 @@
       ch.addEventListener("pointerenter", () => { hovered.add(ch); crazy(ch); });
       ch.addEventListener("pointerleave", () => { hovered.delete(ch); settle(ch, 1000); });
     });
-    // on load, once the title has landed, a calm wave: about five letters, left to right and one at a time,
-    // each takes one wild face for a moment and eases back to Inter
+    // on load, as the loader lifts: every letter starts raised (each by its own amount) in a wild face, then
+    // drops into place with an ease, left to right, and takes back the headline face as it lands
     const scramble = () => {
-      const pool = letters.filter((ch) => ch.textContent.trim());
-      const n = Math.min(5, pool.length);
-      const picks = [];
-      for (let k = 0; k < n; k++) picks.push(pool[Math.floor(((k + 0.2 + Math.random() * 0.6) / n) * pool.length)]);   // one from each stretch of the line
-      picks.forEach((ch, k) => setTimeout(() => {
-        if (hovered.has(ch)) return;
-        base(ch);
-        crazy(ch);
-        settle(ch, 650);
-      }, 900 + k * 320));   // after the words have risen in
+      letters.forEach((ch, i) => {
+        if (!ch.textContent.trim()) return;
+        face(ch, `"${FONTS[Math.floor(Math.random() * FONTS.length)]}"`);
+        const lift = -(0.35 + Math.random() * 0.55);   // em above the line
+        ch.animate([{ transform: `translateY(${lift}em)` }, { transform: "none" }],
+          { duration: MOTION.enter, delay: i * 30, easing: MOTION.swap, fill: "backwards" })
+          .onfinish = () => { if (!hovered.has(ch)) swap(ch, ""); };
+      });
     };
     if (!still) {
       const faces = document.fonts ? Promise.race([Promise.all(FONTS.map((f) => document.fonts.load(`40px "${f}"`, glyphs).catch(() => {}))), new Promise((r) => setTimeout(r, 1200))]) : Promise.resolve();
@@ -296,6 +294,55 @@
     update();
   }
 
+  // Card reels: the centred card cycles through a few highlights from its case study (data.js `reel`).
+  // Clips play for up to 3.5s, stills hold for 2s; cuts are a crossfade with a gentle settle-in zoom.
+  // Layers are built the first time a card comes to the centre; side cards hold still.
+  const reels = new WeakMap();
+  function reelOf(card) {
+    if (reels.has(card)) return reels.get(card);
+    const p = S.projects.find((x) => x.slug === card.dataset.slug);
+    const fig = card.querySelector(".card__media");
+    const first = fig.querySelector("video, img, .ph");
+    const items = [first];
+    (p && p.reel ? p.reel.slice(1) : []).forEach((i) => {
+      const m = p.media[i];
+      if (!m || !m.src) return;
+      const el = document.createElement(m.video ? "video" : "img");
+      if (m.video) { el.muted = true; el.playsInline = true; el.preload = "none"; if (m.poster) el.poster = m.poster; }
+      el.dataset.src = m.src;
+      el.alt = "";
+      fig.insertBefore(el, fig.querySelector(".card__label"));
+      items.push(el);
+    });
+    items.forEach((el, k) => { el.classList.add("reel__item"); el.classList.toggle("is-on", k === 0); });
+    const r = { items, at: 0, timer: 0, on: false };
+    reels.set(card, r);
+    return r;
+  }
+  const reelShow = (r, k) => {
+    const el = r.items[k];
+    if (el.dataset.src && !el.src) el.src = el.dataset.src;   // load a highlight only when it's first needed
+    r.items.forEach((x, j) => x.classList.toggle("is-on", j === k));
+    r.items.forEach((x, j) => { if (j !== k && x.tagName === "VIDEO") x.pause(); });
+    if (el.tagName === "VIDEO") { el.currentTime = 0; el.play().catch(() => {}); }
+    r.at = k;
+    if (r.items.length < 2) return;
+    const hold = el.tagName === "VIDEO" ? Math.min(3500, (el.duration || 3.5) * 1000) : 2000;
+    clearTimeout(r.timer);
+    r.timer = setTimeout(() => { if (r.on) reelShow(r, (r.at + 1) % r.items.length); }, hold);
+  };
+  function reelStart(card) {
+    const r = reelOf(card);
+    if (r.on) return;
+    r.on = true;
+    reelShow(r, r.at);
+  }
+  function reelStop(card) {
+    const r = reels.get(card);
+    if (r) { r.on = false; clearTimeout(r.timer); r.items.forEach((x) => x.tagName === "VIDEO" && x.pause()); }
+    else { const v = card.querySelector("video"); if (v && !v.paused) v.pause(); }
+  }
+
   function carousel(root) {
     const track = root.querySelector(".carousel__track");
     const cards = [...track.children];
@@ -328,9 +375,7 @@
       cards.forEach((c) => {
         const on = c === best;
         c.classList.toggle("is-active", on);
-        const v = c.querySelector("video");
-        if (v && on && v.paused) v.play().catch(() => {});
-        else if (v && !on && !v.paused) v.pause();
+        if (on) reelStart(c); else reelStop(c);
       });
     };
     // videos autoplay as soon as they load; a side card that starts on its own is paused straight away
@@ -346,14 +391,22 @@
     const n = cards.length / 3;
     const setW = () => n * step();
     const jump = (by) => {
-      const from = track.querySelector(".card.is-active video");
-      const t = from ? from.currentTime : 0;
+      // the twin card picks up the reel at the same highlight and frame, so the jump stays invisible
+      const fromCard = track.querySelector(".card.is-active");
+      const fr = fromCard && reels.get(fromCard);
+      const at = fr ? fr.at : 0, cur = fr ? fr.items[fr.at] : null;
+      const t = cur && cur.tagName === "VIDEO" ? cur.currentTime : 0;
       track.classList.add("is-jumping");
       track.style.scrollSnapType = "none";
       track.scrollLeft += by;
       sync();
-      const to = track.querySelector(".card.is-active video");
-      if (to && from && to !== from) to.currentTime = t;   // carry on from the same frame
+      const toCard = track.querySelector(".card.is-active");
+      if (toCard && toCard !== fromCard && fr) {
+        const tr = reelOf(toCard);
+        if (tr.at !== at) reelShow(tr, at);
+        const v = tr.items[at];
+        if (v && v.tagName === "VIDEO") v.currentTime = t;
+      }
       requestAnimationFrame(() => { track.style.scrollSnapType = ""; track.classList.remove("is-jumping"); });
     };
     track.scrollLeft = setW();
