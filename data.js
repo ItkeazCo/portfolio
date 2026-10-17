@@ -67,6 +67,8 @@ window.SITE = {
         { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160 },
         // the user flow, animated in the style guide's language
         { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true },
+        // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
+        { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -80,7 +82,7 @@ window.SITE = {
         { title: "Empty states", text: "An empty month gets a piggy bank with some attitude, not a blank screen. Empty shouldn't look broken; it should nudge us to add the first bill." },
         [4, 5], [6],
         { title: "Motion Lab", text: "A small tool I built to tune animations by dragging curves. Tweaking numbers in code was slow, so I wanted to feel the motion and save it straight into the app." },
-        [7],
+        [20], [7],
         { title: "Style guide", text: "Rubik, because it reads well in Hebrew and English. Deep green feels like money and calm, a lime accent keeps it playful rather than bank-like, and one color per category makes each one easy to spot." },
         [8], [9, 10],
         { title: "Icon set", text: "Custom icons, two-tone for categories and simple lines for the interface. Ready-made sets missed things like the shekel, and the two styles keep categories loud and the interface quiet." },
@@ -92,7 +94,7 @@ window.SITE = {
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 7, 17, { i: 16, cut: true }],
+      reel: [0, 20, 17, { i: 16, cut: true }],
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "UI, design system, motion" },
