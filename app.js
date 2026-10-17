@@ -4,7 +4,7 @@
   const $ = (sel) => document.querySelector(sel);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   // the motion system from styles.css (--dur-fast / --dur-move / --dur-enter), in ms for scripted animation
-  const MOTION = { fast: 200, move: 500, enter: 900, arrive: "cubic-bezier(.16, 1, .3, 1)", swap: "ease" };
+  const MOTION = { fast: 200, move: 500, enter: 900, glide: 1200, arrive: "cubic-bezier(.16, 1, .3, 1)", swap: "ease" };
   const projectUrl = (p) => `project.html?p=${encodeURIComponent(p.slug)}`;
 
   document.documentElement.classList.add("js");
@@ -295,7 +295,7 @@
   }
 
   // Card reels: the centred card cycles through a few highlights from its case study (data.js `reel`).
-  // Clips play for up to 3.5s, stills hold for 2s. Each new highlight slides into the frame from an offset
+  // Clips play for up to 4s, stills stay about 2.8s. Each new highlight glides into the frame from an offset
   // (below, right, above, left in turn) and eases into place over the previous one, which drifts the other way.
   // Layers are built the first time a card comes to the centre; side cards hold still.
   const reels = new WeakMap();
@@ -315,7 +315,7 @@
       fig.insertBefore(el, fig.querySelector(".card__label"));
       items.push(el);
     });
-    const from = [["0", "22%"], ["22%", "0"], ["0", "-22%"], ["-22%", "0"]];
+    const from = [["0", "16%"], ["16%", "0"], ["0", "-16%"], ["-16%", "0"]];
     items.forEach((el, k) => {
       el.classList.add("reel__item");
       el.classList.toggle("is-on", k === 0);
@@ -333,14 +333,14 @@
     const prev = r.items[r.at];
     if (prev && prev !== el && prev.classList.contains("is-on")) {
       prev.classList.add("is-leaving");
-      setTimeout(() => prev.classList.remove("is-leaving"), MOTION.move + 100);
+      setTimeout(() => prev.classList.remove("is-leaving"), MOTION.glide + 100);
     }
     r.items.forEach((x, j) => x.classList.toggle("is-on", j === k));
     r.items.forEach((x, j) => { if (j !== k && x.tagName === "VIDEO") x.pause(); });
     if (el.tagName === "VIDEO") { el.currentTime = 0; el.play().catch(() => {}); }
     r.at = k;
     if (r.items.length < 2) return;
-    const hold = el.tagName === "VIDEO" ? Math.min(3500, (el.duration || 3.5) * 1000) : 2000;
+    const hold = el.tagName === "VIDEO" ? Math.max(MOTION.glide + 800, Math.min(4000, (el.duration || 4) * 1000)) : MOTION.glide + 1600;   // the slide, then time to look
     clearTimeout(r.timer);
     r.timer = setTimeout(() => { if (r.on) reelShow(r, (r.at + 1) % r.items.length); }, hold);
   };
