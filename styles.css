@@ -72,7 +72,7 @@ p, h1 { margin: 0; }
 /* small label above the headline: uppercase, spaced out, quiet */
 .lede__eyebrow { font-size: 13px; line-height: 16px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
 @media (prefers-reduced-motion: no-preference) {
-  .js .lede__headline .word { animation: wordUp var(--dur-enter) var(--ease-bounce) backwards; animation-delay: calc(var(--i) * 60ms + .12s); }   /* a small bounce: overshoots its line a touch, then settles */
+  .js .lede__headline .word { animation: wordUp var(--dur-enter) var(--ease-arrive) backwards; animation-delay: calc(var(--i) * 60ms + .12s); }   /* rises and settles softly, no overshoot */
   .js .lede__eyebrow { animation: wordUp var(--dur-enter) var(--ease-arrive) backwards; }
 }
 /* each word slides up from behind its own baseline: the clip hides what is still below the line, so nothing fades */
