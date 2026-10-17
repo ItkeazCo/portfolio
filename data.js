@@ -104,7 +104,7 @@ window.SITE = {
       reel: [0, 21, 20, 17, { i: 16, cut: true }],
       // small project details under the title: label / value
       meta: [
-        { label: "Scope", value: "UI, design system, motion" },
+        { label: "What I did", value: "UI, design system, motion" },
         { label: "Tools", value: "Claude, Figma, Grok" },
         { label: "Year", value: "2026" },
       ],
@@ -150,7 +150,7 @@ window.SITE = {
       subtitle: "A shopping list for two.",   // one short line under the title
       reel: [0, 3, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
-        { label: "Scope", value: "UI, motion" },
+        { label: "What I did", value: "UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
         { label: "Year", value: "2026" },
       ],
@@ -207,7 +207,7 @@ window.SITE = {
       subtitle: "A design system you can feel.",   // one short line under the title
       reel: [0, 2, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
-        { label: "Scope", value: "Design system, docs" },
+        { label: "What I did", value: "Design system, docs" },
         { label: "Tools", value: "CSS tokens, JS" },
         { label: "Year", value: "2026" },
       ],
