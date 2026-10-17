@@ -92,7 +92,7 @@ window.SITE = {
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 19, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
+      reel: [0, 19, 7, 17, { i: 16, cut: true }],
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "UI, design system, motion" },
@@ -139,7 +139,7 @@ window.SITE = {
       ],
       shotTitle: "Groceries",
       subtitle: "A shopping list for two.",   // one short line under the title
-      reel: [0, 9, 1, 3, 5, 8],   // the card's short reel on the home page: media indexes, in order
+      reel: [0, 9, 3, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
@@ -196,7 +196,7 @@ window.SITE = {
       ],
       shotTitle: "Graphite",
       subtitle: "A design system you can feel.",   // one short line under the title
-      reel: [0, 1, 2, 8, 13, 17],   // the card's short reel on the home page: media indexes, in order
+      reel: [0, 2, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "Design system, docs" },
         { label: "Tools", value: "CSS tokens, JS" },
