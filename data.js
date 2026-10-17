@@ -86,6 +86,8 @@ window.SITE = {
       lines: [
         { title: "Idea and research", text: "Money apps on Mobbin, and the patterns they all share." },
         [25],
+        { title: "How it works", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
+        [19], [23, 2], [21], [22], [14, 15],
         { title: "Prototype", text: "A rough version built fast with Claude, just to feel it." },
         [24],
         { title: "Refine", text: "Frames from Pinterest for more character, then refining it and sharpening the messages." },
@@ -94,8 +96,6 @@ window.SITE = {
         [8], [16], [17, 18], [6], [4, 5], [20],
         { title: "A full design system in Figma", text: "What's documented is what ships, and Groceries is built on it too." },
         [11],
-        { title: "The flows in the app", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
-        [19], [23, 2], [21], [22], [14, 15],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
