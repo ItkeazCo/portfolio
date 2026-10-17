@@ -513,7 +513,6 @@
     };
     // an array in lines is a row of one or two frames; anything else opens a numbered step: a headline that
     // tells the story on its own, a short line of why underneath, then the visuals
-    const steps = p.lines.filter((l) => !Array.isArray(l)).map((l) => (typeof l === "string" ? { title: l } : l));
     let step = 0;
     const lines = p.lines.map((line) => {
       if (Array.isArray(line)) return `<div class="line rise${line.length > 1 ? " line--pair" : ""}">${line.map(frame).join("")}</div>`;
@@ -524,9 +523,8 @@
       return part + `<div class="shot-group rise" id="step-${p.slug}-${k}"><h2 class="shot-sec">${esc(sec.title)}</h2>${sec.text ? `<p class="shot-why">${esc(sec.text)}</p>` : ""}</div>`;
     }).join("");
     if (p.facts) {
-      // a guide: the goal up front, then "how I did it" as numbered steps (also a contents list), then each step
+      // a guide: the goal up front, then each step
       const goal = (f) => `<div class="shot-goal"><span class="shot-kicker">${esc(f.label)}</span><p class="shot-goal-text">${esc(f.text)}</p></div>`;
-      const how = steps.length ? `<div class="shot-how"><span class="shot-kicker">How I did it</span><ol class="shot-toc">${steps.map((st, k) => `${st.part ? `<li class="shot-toc-part">${esc(st.part)}</li>` : ""}<li><a href="#step-${p.slug}-${k}" data-step="step-${p.slug}-${k}">${esc(st.title)}</a></li>`).join("")}</ol></div>` : "";
       return { title, slug: p.slug, html: `
         <article class="shot">
           <h1 class="shot-title rise">${esc(p.shotTitle || p.name)}</h1>
@@ -536,7 +534,7 @@
           <div class="shot-copy rise">
             <p class="shot-lead">${esc(p.intro || p.text)}</p>
             ${p.facts.map(goal).join("")}
-            ${how}
+            
             ${p.link ? `<p class="shot-p"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit website ↗</a></p>` : ""}
           </div>
           <section class="shot-frames">${lines}</section>

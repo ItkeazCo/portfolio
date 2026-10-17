@@ -85,7 +85,7 @@ window.SITE = {
         [23, 2], [3],
         { part: "Flow 2: Seeing what we spend", title: "See where the money goes", text: "Every bill lands in its category, so one tap shows where the month went: as a list, or as a ring with each category's share." },
         [21],
-        { title: "Download the month", text: "One tap in the menu downloads the month as a spreadsheet: what it was, how much, who paid and the category. The numbers never get stuck inside the app." },
+        { title: "Download the month", text: "One tap in the menu downloads the month as a spreadsheet: what it was, how much, who paid and the category. From there it's one more tap to send it to Rotem or keep it in files." },
         [22],
         { title: "Settle up with one button", text: "Mostly for us: we always joke about who owes who, so now the app keeps score. One tap shows it, one button settles the month." },
         [14, 15],
