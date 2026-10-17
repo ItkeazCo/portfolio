@@ -261,6 +261,8 @@ p, h1 { margin: 0; }
 /* every row fills the same width, a Dribbble shot (1024px), shrinking only so a whole row fits one screen;
    a single tall frame sits centred in a 16:9 box on the frames' grey */
 .shot-frames .line { width: 100%; max-width: min(1024px, calc((100svh - 140px) * 16 / 9)); margin-inline: auto; }
+/* the cover frame sits in the same column as every other frame */
+.shot-media { width: 100%; max-width: min(1024px, calc((100svh - 140px) * 16 / 9)); margin-inline: auto; }
 .shot-frames .line--pair { max-width: min(1024px, calc((100svh - 140px) * 16 / 9 + 24px)); }
 .shot-frames .line:not(.line--pair) .frame { aspect-ratio: 16 / 9; background: #F5F5F5; }
 .shot-frames .line:not(.line--pair) .frame :is(img, video) { object-fit: contain; }
@@ -445,7 +447,7 @@ html.lenis, html.lenis body { height: auto; }
   .shot-h { font-size: 26px; line-height: 32px; margin-top: 36px; }
   .shot-frames { gap: 40px; margin-top: 40px; }
   .shot-frames .line { gap: 16px; }
-  .shot-frames .line, .shot-frames .line--pair { max-width: none; }
+  .shot-frames .line, .shot-frames .line--pair, .shot-media { max-width: none; }
   .shot-frames .line:not(.line--pair) .frame { aspect-ratio: var(--ar, 16 / 9); }
   .shot-group { margin: 24px auto -12px; }
   .shot-group.shot-group--phase { margin-top: 56px; }
