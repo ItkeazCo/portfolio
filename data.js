@@ -26,7 +26,7 @@ window.SITE = {
     headline: "I design the product, the motion and the system underneath.",
     story: [
       "I'm Itamar, a product designer. I take products from the first question to the live release: the research, the interface, the way it moves and the design system that keeps it all consistent.",
-      "A lot of my recent work started at home. Homie splits the household bills, Groceries plans the weekly shop, and both run on a design system I built for them. Graphite came from the other direction: a quiet, tactile system for tools you tune by hand, with its own documentation site.",
+      "A lot of my recent work started at home. Homie shows my girlfriend and me what we spend at home, Groceries plans the weekly shop, and both run on a design system I built for them. Graphite came from the other direction: a quiet, tactile system for tools you tune by hand, with its own documentation site.",
       "I prototype in code, so what I design is what ships. Tokens, components and motion live in the same files as the product.",
     ],
     rows: [
@@ -71,7 +71,7 @@ window.SITE = {
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        { title: "User flow", text: "The whole app in one picture: add a bill, land back home, settle the month." },
+        { title: "User flow", text: "The whole app in one picture: add a bill, and the month shows where our money went." },
         [19],
         { title: "Add expense", text: "Type the amount, pick a category, done. A little coin burst makes it feel like a win." },
         [1, 2], [3],
@@ -90,7 +90,7 @@ window.SITE = {
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
-      subtitle: "Splitting home bills, the easy way.",   // one short line under the title
+      subtitle: "Our home spending, always in view.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
       reel: [0, 19, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
       // small project details under the title: label / value
@@ -99,9 +99,9 @@ window.SITE = {
         { label: "Tools", value: "Claude, Figma" },
         { label: "Year", value: "2026" },
       ],
-      intro: "A simple app for two people to split home bills.",
+      intro: "An app I made for me and my girlfriend, so we always know what we're spending, and on what.",
       facts: [
-        { label: "The challenge", text: "Make adding a bill quick, and make money talk feel light." },
+        { label: "The challenge", text: "Make adding a bill quick enough that we actually do it, and make money talk feel light." },
       ],
     },
     {
