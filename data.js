@@ -89,12 +89,13 @@ window.SITE = {
         [11], [12], [13],
       ],
       // shot page (layout after Dribbble's shot pages)
-      shotTitle: "Homie · Household Expenses App & Design System",
+      shotTitle: "Homie",
+      subtitle: "Splitting home bills, the easy way.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
       reel: [0, 19, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
       // small project details under the title: label / value
       meta: [
-        { label: "Scope", value: "Product, UI, design system, motion" },
+        { label: "Scope", value: "UI, design system, motion" },
         { label: "Tools", value: "Claude, Figma" },
         { label: "Year", value: "2026" },
       ],
@@ -136,14 +137,15 @@ window.SITE = {
         { title: "Product pictures", text: "3D emoji, so you spot milk or bread at a glance." },
         [8],
       ],
-      shotTitle: "Groceries · Shared Shopping List, built on Homie",
+      shotTitle: "Groceries",
+      subtitle: "A shopping list for two.",   // one short line under the title
       reel: [0, 9, 1, 3, 5, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
-        { label: "Scope", value: "Product, UI, motion" },
+        { label: "Scope", value: "UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
         { label: "Year", value: "2026" },
       ],
-      intro: "A shared shopping list for two, built around a real trip to the store.",
+      intro: "A shared shopping list, built around a real trip to the store.",
       facts: [
         { label: "The challenge", text: "Make a list that's faster to fill than typing, and easy to use with one hand." },
       ],
@@ -192,7 +194,8 @@ window.SITE = {
         { title: "Light and dark", text: "Dark mode is designed on its own, not just inverted." },
         [15, 16], [17],
       ],
-      shotTitle: "Graphite · Design System & Documentation",
+      shotTitle: "Graphite",
+      subtitle: "A design system you can feel.",   // one short line under the title
       reel: [0, 1, 2, 8, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "Design system, docs" },

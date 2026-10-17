@@ -522,7 +522,8 @@
       const section = (f) => `<h2 class="shot-h">${esc(f.label)}</h2>${f.items ? `<ul class="shot-list">${f.items.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>` : `<p class="shot-p">${esc(f.text)}</p>`}`;
       return { title, slug: p.slug, html: `
         <article class="shot">
-          <h1 class="shot-title rise">${esc(p.shotTitle || `${p.name} · ${p.kind}`)}</h1>
+          <h1 class="shot-title rise">${esc(p.shotTitle || p.name)}</h1>
+          ${p.subtitle ? `<p class="shot-subtitle rise">${esc(p.subtitle)}</p>` : ""}
           ${p.meta ? `<dl class="shot-meta rise">${p.meta.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>` : ""}
           ${p.hero != null ? `<div class="shot-media rise" style="--delay:.05s">${frame(p.hero)}</div>` : ""}
           <div class="shot-copy rise">
