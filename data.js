@@ -92,7 +92,7 @@ window.SITE = {
         [25], [24],
         { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
         [19], [23, 2], [21, 15], [22],
-        { title: "Build the visual language", text: "Pinterest for character, Bit for a friendly, light feel, a Grok bot to shape the voice, and a full design system in Figma." },
+        { title: "Build the visual language", text: "I set up a branding bot in Grok and used it to put together a moodboard. Then we refined the language and the brand on the real screens, and built a design system in Figma." },
         [27], [26], [8], [6], [11],
         { title: "Icons, with a Grok brand manager", text: "I drew every category icon myself in Figma, with an icon maker. For the interface we wanted a ready-made library, so I set up a Grok bot as our brand manager, showed it our real menu in three libraries, and picked the one it found closest to our brand." },
         [16], [28], [17, 18],
