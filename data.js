@@ -86,7 +86,8 @@ window.SITE = {
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie · Household Expenses App & Design System",
-      reel: [0, 2, 14, 4, 7, 16],   // the card's short reel on the home page: media indexes, in order
+      // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
+      reel: [0, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "Product, UI, design system, motion" },

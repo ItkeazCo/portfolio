@@ -307,12 +307,14 @@
     const fig = card.querySelector(".card__media");
     const first = fig.querySelector("video, img, .ph");
     const items = [first];
-    (p && p.reel ? p.reel.slice(1) : []).forEach((i) => {
+    (p && p.reel ? p.reel.slice(1) : []).forEach((entry) => {
+      const i = typeof entry === "object" ? entry.i : entry;
       const m = p.media[i];
       if (!m || !m.src) return;
       const el = document.createElement(m.video ? "video" : "img");
       if (m.video) { el.muted = true; el.playsInline = true; el.preload = "none"; if (m.poster) el.poster = m.poster; }
       el.dataset.src = m.src;
+      if (typeof entry === "object" && entry.cut) el.dataset.cut = "1";   // a hard cut: appears at once, no slide
       el.alt = "";
       fig.insertBefore(el, fig.querySelector(".card__label"));
       items.push(el);
@@ -337,6 +339,8 @@
       prev.classList.add("is-leaving");
       setTimeout(() => prev.classList.remove("is-leaving"), MOTION.glide + 100);
     }
+    el.classList.toggle("is-cut", !!el.dataset.cut);
+    if (el.dataset.cut && prev) prev.classList.remove("is-leaving");
     r.items.forEach((x, j) => x.classList.toggle("is-on", j === k));
     r.items.forEach((x, j) => { if (j !== k && x.tagName === "VIDEO") x.pause(); });
     if (el.tagName === "VIDEO") { el.currentTime = 0; el.play().catch(() => {}); }

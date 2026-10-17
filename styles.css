@@ -124,6 +124,7 @@ p, h1 { margin: 0; }
    and the previous one drifts a little the other way as it's covered; waiting items snap back without animating */
 .carousel__track .card__media .reel__item { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #F5F5F5; opacity: 0; transform: translate(var(--ox, 0), var(--oy, 0)); transition: none; }
 .carousel__track .card__media .reel__item.is-on { opacity: 1; transform: none; z-index: 2; transition: transform var(--dur-glide) var(--ease-arrive); }   /* no fade: it slides in solid, clipped by the frame */
+.carousel__track .card__media .reel__item.is-on.is-cut { transition: none; }   /* hard cut: e.g. outline icons jumping to the full set */
 .carousel__track .card__media .reel__item.is-leaving { opacity: 1; z-index: 1; transform: translate(calc(var(--ox, 0) * -.3), calc(var(--oy, 0) * -.3)); transition: transform var(--dur-glide) var(--ease-arrive); }
 /* the project name sits on the card, bottom left, as a small pill */
 .carousel__track .card__label {
