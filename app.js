@@ -514,7 +514,6 @@
     // an array in lines is a row of one or two frames; anything else opens a numbered step: a headline that
     // tells the story on its own, a short line of why underneath, then the visuals
     const steps = p.lines.filter((l) => !Array.isArray(l)).map((l) => (typeof l === "string" ? { title: l } : l));
-    const num = (k) => String(k + 1).padStart(2, "0");
     let step = 0;
     const lines = p.lines.map((line) => {
       // --lar is the row's width-to-height ratio, so the row can be capped to fit one screen's height
@@ -524,12 +523,12 @@
       const k = step++;
       // a step with a part (e.g. "Flow 1: Adding an expense") starts a new chapter of the story
       const part = sec.part ? `<div class="shot-part rise"><span class="shot-kicker">${esc(sec.part.split(": ")[0])}</span><p class="shot-part-title">${esc(sec.part.split(": ").slice(1).join(": "))}</p></div>` : "";
-      return part + `<div class="shot-group rise" id="step-${p.slug}-${k}"><span class="shot-num">${num(k)}</span><h2 class="shot-sec">${esc(sec.title)}</h2>${sec.text ? `<p class="shot-why">${esc(sec.text)}</p>` : ""}</div>`;
+      return part + `<div class="shot-group rise" id="step-${p.slug}-${k}"><h2 class="shot-sec">${esc(sec.title)}</h2>${sec.text ? `<p class="shot-why">${esc(sec.text)}</p>` : ""}</div>`;
     }).join("");
     if (p.facts) {
       // a guide: the goal up front, then "how I did it" as numbered steps (also a contents list), then each step
       const goal = (f) => `<div class="shot-goal"><span class="shot-kicker">${esc(f.label)}</span><p class="shot-goal-text">${esc(f.text)}</p></div>`;
-      const how = steps.length ? `<div class="shot-how"><span class="shot-kicker">How I did it</span><ol class="shot-toc">${steps.map((st, k) => `${st.part ? `<li class="shot-toc-part">${esc(st.part)}</li>` : ""}<li><a href="#step-${p.slug}-${k}" data-step="step-${p.slug}-${k}"><span class="shot-num">${num(k)}</span>${esc(st.title)}</a></li>`).join("")}</ol></div>` : "";
+      const how = steps.length ? `<div class="shot-how"><span class="shot-kicker">How I did it</span><ol class="shot-toc">${steps.map((st, k) => `${st.part ? `<li class="shot-toc-part">${esc(st.part)}</li>` : ""}<li><a href="#step-${p.slug}-${k}" data-step="step-${p.slug}-${k}">${esc(st.title)}</a></li>`).join("")}</ol></div>` : "";
       return { title, slug: p.slug, html: `
         <article class="shot">
           <h1 class="shot-title rise">${esc(p.shotTitle || p.name)}</h1>
