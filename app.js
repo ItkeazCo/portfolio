@@ -520,7 +520,8 @@
       const sec = typeof line === "string" ? { title: line } : line;
       const k = step++;
       // a step with a part (e.g. "Flow 1: Adding an expense") starts a new chapter of the story
-      const part = sec.part ? `<div class="shot-part rise"><span class="shot-kicker">${esc(sec.part.split(": ")[0])}</span><p class="shot-part-title">${esc(sec.part.split(": ").slice(1).join(": "))}</p></div>` : "";
+      const [kick, ...rest] = (sec.part || "").split(": ");
+      const part = sec.part ? `<div class="shot-part rise">${rest.length ? `<span class="shot-kicker">${esc(kick)}</span>` : ""}<p class="shot-part-title">${esc(rest.length ? rest.join(": ") : kick)}</p></div>` : "";
       return part + `<div class="shot-group rise" id="step-${p.slug}-${k}"><h2 class="shot-sec">${esc(sec.title)}</h2>${sec.text ? `<p class="shot-why">${esc(sec.text)}</p>` : ""}</div>`;
     }).join("");
     if (p.facts) {
