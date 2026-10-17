@@ -115,7 +115,14 @@
       const clip = from && !el.classList.contains("is-full") && cardClip(from);
       if (clip) {
         el.classList.add("is-morph");
-        panel.animate([{ clipPath: "inset(0 0 0 0 round 16px 16px 0 0)" }, { clipPath: clip }], { duration: MOTION.move, easing: MOTION.arrive, fill: "forwards" });
+        // the content fades out first, the window shrinks into the card, and the window itself fades as it
+        // lands, so what's left on screen is the real card rather than a different crop of the sheet
+        body.animate([{ opacity: 1 }, { opacity: 0 }], { duration: MOTION.fast, easing: MOTION.swap, fill: "forwards" });
+        panel.animate([
+          { clipPath: "inset(0 0 0 0 round 16px 16px 0 0)", opacity: 1, offset: 0 },
+          { opacity: 1, offset: 0.55 },
+          { clipPath: clip, opacity: 0, offset: 1 },
+        ], { duration: MOTION.move, easing: MOTION.arrive, fill: "forwards" });
       } else el.classList.remove("is-morph");
       el.classList.remove("is-open", "is-full");
       document.documentElement.classList.remove("sheet-lock");
@@ -124,9 +131,9 @@
       body.querySelectorAll("video").forEach((v) => v.pause());
       closing = setTimeout(() => {
         el.hidden = true; body.innerHTML = ""; el.classList.remove("is-morph"); from = null;
-        panel.getAnimations().forEach((a) => a.cancel());   // clear the held clip only once the sheet is hidden
+        [panel, body].forEach((n) => n.getAnimations().forEach((a) => a.cancel()));   // clear the held clip and fade only once hidden
       }, MOTION.move + 40);
-      if (opener) opener.focus({ preventScroll: true });
+      if (opener) opener.focus({ preventScroll: true, focusVisible: false });   // focus goes back quietly, no ring
       if (!fromHistory) history.state && history.state.sheet ? history.back() : history.replaceState(null, "", location.pathname + location.search);
     };
     $("#work").addEventListener("click", (e) => {
