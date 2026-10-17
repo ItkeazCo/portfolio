@@ -66,7 +66,7 @@ window.SITE = {
         { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160 },
         { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160 },
         // the user flow, animated in the style guide's language
-        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true },
+        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
         // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
         { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true },
         // the category breakdown: list, then the ring chart
@@ -134,7 +134,7 @@ window.SITE = {
         { src: "media/shop/f04-flow.jpg", w: 3840, h: 2160 },
         { src: "media/shop/sg-icons3d.jpg", w: 3840, h: 2160 },
         // the user flow, animated in the Homie style guide's language
-        { src: "media/shop/v05-userflow.webm", poster: "media/shop/v05-userflow.jpg", w: 1920, h: 1080, video: true },
+        { src: "media/shop/v05-userflow.webm", poster: "media/shop/v05-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
       ],
       hero: 0,
       lines: [

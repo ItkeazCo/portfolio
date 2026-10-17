@@ -12,7 +12,8 @@
 
   function media(m, tint) {
     if (!m.src) return `<div class="ph" style="--tint:${tint}"></div>`;
-    if (m.video) return `<video src="${esc(m.src)}"${m.poster ? ` poster="${esc(m.poster)}"` : ""} autoplay muted loop playsinline preload="metadata"></video>`;
+    // a { once: true } video plays a single time when it comes into view, then holds its last frame
+    if (m.video) return `<video src="${esc(m.src)}"${m.poster ? ` poster="${esc(m.poster)}"` : ""}${m.once ? " data-once" : " autoplay loop"} muted playsinline preload="metadata"></video>`;
     return `<img src="${esc(m.src)}" alt="" loading="lazy" draggable="false">`;
   }
 
@@ -642,6 +643,8 @@
       });
     }, { rootMargin: "0px 0px -5% 0px" });
     root.querySelectorAll(".rise:not(.is-in)").forEach((el) => io.observe(el));
+    const once = new IntersectionObserver((entries) => entries.filter((e) => e.isIntersecting).forEach((e) => { e.target.play().catch(() => {}); once.unobserve(e.target); }), { threshold: 0.5 });
+    root.querySelectorAll("video[data-once]").forEach((v) => once.observe(v));
   }
 
   // Fade the page out before following internal links.
