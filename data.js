@@ -86,18 +86,12 @@ window.SITE = {
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        { title: "Idea and research", text: "Money apps on Mobbin, and the patterns they all share." },
-        [25],
-        { title: "How it works", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
+        { title: "Plan and prototype", text: "Money apps on Mobbin for the patterns they share, then a rough prototype with Claude, just to feel it." },
+        [25], [24],
+        { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
         [19], [23, 2], [21, 15], [22],
-        { title: "Prototype", text: "A rough version built fast with Claude, just to feel it." },
-        [24],
-        { title: "Refine", text: "Frames from Pinterest for more character, then refining it and sharpening the messages." },
-        [26],
-        { title: "Visual language, with Grok", text: "A Grok bot, and apps that feel friendly and light like Bit, shaped the colors, icons, illustrations and motion." },
-        [27], [8], [16], [17, 18], [6], [20],
-        { title: "A full design system in Figma", text: "What's documented is what ships, and Groceries is built on it too." },
-        [11],
+        { title: "Build the visual language", text: "Pinterest for character, Bit for a friendly, light feel, a Grok bot for the voice and icons, and a full design system in Figma." },
+        [26], [27], [8], [16], [17, 18], [6], [20], [11],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
