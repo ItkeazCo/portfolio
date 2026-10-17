@@ -145,7 +145,7 @@ window.SITE = {
         { label: "Tools", value: "HTML, CSS, JS" },
         { label: "Year", value: "2026" },
       ],
-      intro: "A shared shopping list, built around a real trip to the store.",
+      intro: "Instead of sending each other messages to build a list, we share one list that's always up to date. And we pick products by seeing them, not from memory.",
       facts: [
         { label: "The challenge", text: "Make a list that's faster to fill than typing, and easy to use with one hand." },
       ],
