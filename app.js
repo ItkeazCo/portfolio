@@ -3,6 +3,8 @@
   const page = document.body.dataset.page;
   const $ = (sel) => document.querySelector(sel);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // the motion system from styles.css (--dur-fast / --dur-move / --dur-enter), in ms for scripted animation
+  const MOTION = { fast: 200, move: 500, enter: 900, arrive: "cubic-bezier(.16, 1, .3, 1)", swap: "ease" };
   const projectUrl = (p) => `project.html?p=${encodeURIComponent(p.slug)}`;
 
   document.documentElement.classList.add("js");
@@ -79,7 +81,16 @@
         .forEach((el, k) => el.style.setProperty("--delay", (0.32 + k * 0.09).toFixed(2) + "s"));
       watchRise(panel);
     };
-    const open = (slug, push) => {
+    // the sheet grows out of the card you clicked: a clip that starts at the card's outline and opens to the
+    // full panel, and on close shrinks back into that card if it's still on screen
+    let from = null;
+    const cardClip = (card) => {
+      const c = card.querySelector(".card__media").getBoundingClientRect(), pn = panel.getBoundingClientRect();
+      if (c.bottom < 0 || c.top > innerHeight) return null;
+      return `inset(${c.top - pn.top}px ${pn.right - c.right}px ${pn.bottom - c.bottom}px ${c.left - pn.left}px round 8px)`;
+    };
+    const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const open = (slug, push, card) => {
       clearTimeout(closing);
       if (!el.hidden && el.classList.contains("is-open")) { fill(slug); if (push) history.replaceState(null, "", "#" + slug); return; }
       opener = document.activeElement;
@@ -88,18 +99,33 @@
       el.hidden = false;
       toTop();   // again now the panel has a size
       document.documentElement.classList.add("sheet-lock");
+      from = card && !still ? card : null;
+      if (from) el.classList.add("is-morph");   // no slide-up: the clip does the opening (set first, so the panel is measured in place)
+      const clip = from && cardClip(from);
+      if (!clip) el.classList.remove("is-morph");
+      if (clip) {
+        panel.animate([{ clipPath: clip }, { clipPath: "inset(0 0 0 0 round 16px 16px 0 0)" }], { duration: MOTION.move, easing: MOTION.arrive });
+      }
       requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add("is-open")));
       panel.focus({ preventScroll: true });
       if (push) history.pushState({ sheet: slug }, "", "#" + slug);
     };
     const close = (fromHistory) => {
       if (el.hidden) return;
+      const clip = from && !el.classList.contains("is-full") && cardClip(from);
+      if (clip) {
+        el.classList.add("is-morph");
+        panel.animate([{ clipPath: "inset(0 0 0 0 round 16px 16px 0 0)" }, { clipPath: clip }], { duration: MOTION.move, easing: MOTION.arrive, fill: "forwards" });
+      } else el.classList.remove("is-morph");
       el.classList.remove("is-open", "is-full");
       document.documentElement.classList.remove("sheet-lock");
       if (window.__lenis) window.__lenis.start();
       document.title = homeTitle;
       body.querySelectorAll("video").forEach((v) => v.pause());
-      closing = setTimeout(() => { el.hidden = true; body.innerHTML = ""; }, 420);
+      closing = setTimeout(() => {
+        el.hidden = true; body.innerHTML = ""; el.classList.remove("is-morph"); from = null;
+        panel.getAnimations().forEach((a) => a.cancel());   // clear the held clip only once the sheet is hidden
+      }, MOTION.move + 40);
       if (opener) opener.focus({ preventScroll: true });
       if (!fromHistory) history.state && history.state.sheet ? history.back() : history.replaceState(null, "", location.pathname + location.search);
     };
@@ -107,7 +133,7 @@
       const a = e.target.closest("a[data-slug]");
       if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
       e.preventDefault();
-      open(a.dataset.slug, true);
+      open(a.dataset.slug, true, a);
     });
     body.addEventListener("click", (e) => {
       const a = e.target.closest("a[data-slug]");
@@ -174,11 +200,11 @@
       if (runs.has(ch)) runs.get(ch).forEach((a) => a.cancel());
       const apply = () => face(ch, family);
       if (still) return apply();
-      const out = ch.animate([{ transform: "none" }, { transform: "scale(.9) translateY(.02em)" }], { duration: 160, easing: "ease", fill: "forwards" });
+      const out = ch.animate([{ transform: "none" }, { transform: "scale(.9) translateY(.02em)" }], { duration: MOTION.fast, easing: MOTION.swap, fill: "forwards" });
       runs.set(ch, [out]);
       out.onfinish = () => {
         apply();
-        const back = ch.animate([{ transform: "scale(.9) translateY(.02em)" }, { transform: "none" }], { duration: 320, easing: "ease" });
+        const back = ch.animate([{ transform: "scale(.9) translateY(.02em)" }, { transform: "none" }], { duration: MOTION.move - MOTION.fast, easing: MOTION.swap });
         out.cancel();
         runs.set(ch, [back]);
         back.onfinish = () => runs.delete(ch);
