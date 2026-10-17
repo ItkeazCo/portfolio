@@ -65,10 +65,14 @@ window.SITE = {
         { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160 },
         { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160 },
         { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160 },
+        // the user flow, animated in the style guide's language
+        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
+        { title: "User flow", text: "The whole idea in one picture. Open the app to this month, log a bill in four quick steps, mark it monthly if it repeats, and land back home. When it's time, see who owes whom and close the month with one tap." },
+        [19],
         { title: "Add expense flow", text: "Type the amount on a big keypad, pick what it was for from chips that also set the category, and tick monthly if it repeats. Saving counts the amount up with money spilling out, so logging a bill feels like a small win instead of a chore." },
         [1, 2], [3],
         { title: "Who owes whom", text: "Splitting is the point, so the month always knows who owes whom. Tap the line under the total to see it: a wallet, the amount, and one button to close the month. Closing it turns the popup into a check with a burst of coins, and the debt is cleared." },
@@ -87,7 +91,7 @@ window.SITE = {
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie · Household Expenses App & Design System",
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
+      reel: [0, 19, 2, 14, 4, 7, 8, 10, 17, { i: 16, cut: true }, 11, 12, 13],
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "Product, UI, design system, motion" },
