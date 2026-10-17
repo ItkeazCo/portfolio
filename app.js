@@ -295,7 +295,8 @@
   }
 
   // Card reels: the centred card cycles through a few highlights from its case study (data.js `reel`).
-  // Clips play for up to 3.5s, stills hold for 2s; cuts are a crossfade with a gentle settle-in zoom.
+  // Clips play for up to 3.5s, stills hold for 2s. Each new highlight slides into the frame from an offset
+  // (below, right, above, left in turn) and eases into place over the previous one, which drifts the other way.
   // Layers are built the first time a card comes to the centre; side cards hold still.
   const reels = new WeakMap();
   function reelOf(card) {
@@ -314,7 +315,14 @@
       fig.insertBefore(el, fig.querySelector(".card__label"));
       items.push(el);
     });
-    items.forEach((el, k) => { el.classList.add("reel__item"); el.classList.toggle("is-on", k === 0); });
+    const from = [["0", "22%"], ["22%", "0"], ["0", "-22%"], ["-22%", "0"]];
+    items.forEach((el, k) => {
+      el.classList.add("reel__item");
+      el.classList.toggle("is-on", k === 0);
+      const [x, y] = from[k % from.length];
+      el.style.setProperty("--ox", x);
+      el.style.setProperty("--oy", y);
+    });
     const r = { items, at: 0, timer: 0, on: false };
     reels.set(card, r);
     return r;
@@ -322,6 +330,11 @@
   const reelShow = (r, k) => {
     const el = r.items[k];
     if (el.dataset.src && !el.src) el.src = el.dataset.src;   // load a highlight only when it's first needed
+    const prev = r.items[r.at];
+    if (prev && prev !== el && prev.classList.contains("is-on")) {
+      prev.classList.add("is-leaving");
+      setTimeout(() => prev.classList.remove("is-leaving"), MOTION.move + 100);
+    }
     r.items.forEach((x, j) => x.classList.toggle("is-on", j === k));
     r.items.forEach((x, j) => { if (j !== k && x.tagName === "VIDEO") x.pause(); });
     if (el.tagName === "VIDEO") { el.currentTime = 0; el.play().catch(() => {}); }
