@@ -73,6 +73,8 @@ window.SITE = {
         { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true },
         // the menu's "download the month", then the spreadsheet it makes
         { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true },
+        // the winged coin on its own: the money flying away after a save
+        { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -80,7 +82,7 @@ window.SITE = {
         { title: "The whole app on one page", text: "The whole app in one picture: add a bill with its category, and the month shows what we spent on. Everything is a tap from home, so logging is faster than forgetting." },
         [19],
         { part: "Flow 1: Adding an expense", title: "Add a bill in a few taps", text: "Type the amount, pick what it was for, done. Every bill gets a category so we can see where money goes, and you watch the money fly away, which makes logging feel like a small, funny win." },
-        [1, 2], [3],
+        [23, 2], [3],
         { part: "Flow 2: Seeing what we spend", title: "See where the money goes", text: "Every bill lands in its category, so one tap shows where the month went: as a list, or as a ring with each category's share." },
         [21],
         { title: "Download the month", text: "One tap in the menu downloads the month as a spreadsheet: what it was, how much, who paid and the category. The numbers never get stuck inside the app." },
