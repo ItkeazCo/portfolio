@@ -77,12 +77,22 @@ window.SITE = {
         { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true },
         // where it started: the first prototype next to today's app
         { src: "media/homie/f06-before-after.jpg", w: 1920, h: 1080 },
+        // process boards: patterns kept from browsing money apps on Mobbin, and the tone of voice
+        { src: "media/homie/f07-patterns.jpg", w: 1920, h: 1080 },
+        { src: "media/homie/f08-voice.jpg", w: 1920, h: 1080 },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        { title: "Start with a rough prototype", text: "The first version I made with Claude, just to feel it. Everything since was added and changed on top." },
+        { part: "How I made it: From idea to app", title: "Start with a rough prototype", text: "First the idea, then a quick prototype with Claude, just to feel it." },
         [24],
+        { title: "Borrow patterns that work", text: "On Mobbin we looked at other money apps and kept the patterns that came back again and again." },
+        [25],
+        { title: "Give it character", text: "We threw in frames from Pinterest to give it more personality, then refined it and sharpened the messages." },
+        { title: "Find the voice with a Grok bot", text: "With a Grok bot I shaped the visual language and tone of voice, inspired by apps that feel friendly and light, like Bit." },
+        [26],
+        { title: "Build a whole visual language", text: "Icons, illustrations and animations, all speaking the same language." },
+        [6],
         { title: "The whole app on one page", text: "Everything is one tap from home." },
         [19],
         { part: "Flow 1: Adding an expense", title: "Add a bill in a few taps", text: "Amount, category, done. Then the money flies away." },
@@ -94,7 +104,7 @@ window.SITE = {
         { title: "Settle up with one button", text: "We always joke about who owes who, so the app keeps score." },
         [14, 15],
         { part: "The details: How it looks and feels", title: "Make empty months friendly", text: "An empty month gets a piggy bank, not a blank screen." },
-        [4, 5], [6],
+        [4, 5],
         { title: "Tune motion by dragging curves", text: "A small tool to feel the motion and save it straight into the app." },
         [20], [7],
         { title: "Green, lime, one color per category", text: "Rubik reads well in Hebrew. Green feels like money, lime keeps it playful." },
