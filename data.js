@@ -75,10 +75,14 @@ window.SITE = {
         { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true },
         // the winged coin on its own: the money flying away after a save
         { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true },
+        // where it started: the first prototype next to today's app
+        { src: "media/homie/f06-before-after.jpg", w: 1920, h: 1080 },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
+        { title: "Start with a rough prototype", text: "The first version I made with Claude, just to feel it. Everything since was added and changed on top." },
+        [24],
         { title: "The whole app on one page", text: "Everything is one tap from home." },
         [19],
         { part: "Flow 1: Adding an expense", title: "Add a bill in a few taps", text: "Amount, category, done. Then the money flies away." },
