@@ -69,6 +69,8 @@ window.SITE = {
         { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true },
         // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
         { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true },
+        // the category breakdown: list, then the ring chart
+        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -77,6 +79,8 @@ window.SITE = {
         [19],
         { title: "Add a bill in a few taps", text: "Type the amount, pick what it was for, done. Every bill gets a category so we can see where money goes, and you watch the money fly away, which makes logging feel like a small, funny win." },
         [1, 2], [3],
+        { title: "See where the money goes", text: "Every bill lands in its category, so one tap shows where the month went: as a list, or as a ring with each category's share." },
+        [21],
         { title: "Settle up with one button", text: "Mostly for us: we always joke about who owes who, so now the app keeps score. One tap shows it, one button settles the month." },
         [14, 15],
         { title: "Make empty months friendly", text: "An empty month gets a piggy bank with some attitude, not a blank screen. Empty shouldn't look broken; it should nudge us to add the first bill." },
@@ -94,7 +98,7 @@ window.SITE = {
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 20, 17, { i: 16, cut: true }],
+      reel: [0, 21, 20, 17, { i: 16, cut: true }],
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "UI, design system, motion" },
