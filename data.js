@@ -113,7 +113,7 @@ window.SITE = {
       ],
       intro: "An app I made for me and my girlfriend, so we always see what we spend on: groceries, bills, going out.",
       facts: [
-        { label: "What I wanted", text: "Keeping track in Excel was too much work, so we didn't. I wanted it so easy that whoever pays just opens the app and adds it, and we both stay in sync on what we paid for and when." },
+        { label: "What I wanted", text: "A simple, clear way for my girlfriend and me to track our spending and pull reports." },
       ],
     },
     {
