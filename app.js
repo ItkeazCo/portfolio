@@ -231,17 +231,19 @@
       ch.addEventListener("pointerenter", () => { hovered.add(ch); crazy(ch); });
       ch.addEventListener("pointerleave", () => { hovered.delete(ch); settle(ch, 1000); });
     });
-    // on load, as the loader lifts: every letter starts raised (each by its own amount) in a wild face, then
-    // drops into place with an ease, left to right, and takes back the headline face as it lands
+    // on load, once the title has landed, a calm wave: about five letters, left to right and one at a time,
+    // each takes one wild face for a moment and eases back to Inter
     const scramble = () => {
-      letters.forEach((ch, i) => {
-        if (!ch.textContent.trim()) return;
-        face(ch, `"${FONTS[Math.floor(Math.random() * FONTS.length)]}"`);
-        const lift = -(0.35 + Math.random() * 0.55);   // em above the line
-        ch.animate([{ transform: `translateY(${lift}em)` }, { transform: "none" }],
-          { duration: MOTION.enter, delay: i * 30, easing: MOTION.swap, fill: "backwards" })
-          .onfinish = () => { if (!hovered.has(ch)) swap(ch, ""); };
-      });
+      const pool = letters.filter((ch) => ch.textContent.trim());
+      const n = Math.min(5, pool.length);
+      const picks = [];
+      for (let k = 0; k < n; k++) picks.push(pool[Math.floor(((k + 0.2 + Math.random() * 0.6) / n) * pool.length)]);   // one from each stretch of the line
+      picks.forEach((ch, k) => setTimeout(() => {
+        if (hovered.has(ch)) return;
+        base(ch);
+        crazy(ch);
+        settle(ch, 650);
+      }, 900 + k * 320));   // after the words have risen in
     };
     if (!still) {
       const faces = document.fonts ? Promise.race([Promise.all(FONTS.map((f) => document.fonts.load(`40px "${f}"`, glyphs).catch(() => {}))), new Promise((r) => setTimeout(r, 1200))]) : Promise.resolve();
