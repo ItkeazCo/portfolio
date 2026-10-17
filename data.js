@@ -98,7 +98,7 @@ window.SITE = {
       // small project details under the title: label / value
       meta: [
         { label: "Scope", value: "UI, design system, motion" },
-        { label: "Tools", value: "Claude, Figma" },
+        { label: "Tools", value: "Claude, Figma, Grok" },
         { label: "Year", value: "2026" },
       ],
       intro: "An app I made for me and my girlfriend, so we always see what we spend on: groceries, bills, going out.",
