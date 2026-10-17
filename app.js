@@ -516,9 +516,7 @@
     const steps = p.lines.filter((l) => !Array.isArray(l)).map((l) => (typeof l === "string" ? { title: l } : l));
     let step = 0;
     const lines = p.lines.map((line) => {
-      // --lar is the row's width-to-height ratio, so the row can be capped to fit one screen's height
-      if (Array.isArray(line)) { const m = p.media[line[0]] || {}; const lar = line.length > 1 ? (16 / 9).toFixed(4) : (m.w && m.h ? (m.w / m.h).toFixed(4) : (16 / 9).toFixed(4));
-        return `<div class="line rise${line.length > 1 ? " line--pair" : ""}" style="--lar:${lar}">${line.map(frame).join("")}</div>`; }
+      if (Array.isArray(line)) return `<div class="line rise${line.length > 1 ? " line--pair" : ""}">${line.map(frame).join("")}</div>`;
       const sec = typeof line === "string" ? { title: line } : line;
       const k = step++;
       // a step with a part (e.g. "Flow 1: Adding an expense") starts a new chapter of the story

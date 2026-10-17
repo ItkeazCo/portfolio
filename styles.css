@@ -256,9 +256,12 @@ p, h1 { margin: 0; }
 .shot-list { margin: 0; padding-left: 1.2em; font-size: 20px; line-height: 32px; }
 .shot-frames { display: flex; flex-direction: column; gap: 72px; margin-top: 72px; }
 .shot-frames .line { gap: 24px; }
-/* every frame fits on one screen: a row is never wider than its height allows, and never wider than a Dribbble shot (1024px) */
-.shot-frames .line { width: 100%; max-width: min(1024px, calc((100svh - 140px) * var(--lar, 1.7778))); margin-inline: auto; }
-.shot-frames .line--pair { max-width: min(1024px, calc((100svh - 140px) * var(--lar, 1.7778) + 24px)); }
+/* every row fills the same width, a Dribbble shot (1024px), shrinking only so a whole row fits one screen;
+   a single tall frame sits centred in a 16:9 box on the frames' grey */
+.shot-frames .line { width: 100%; max-width: min(1024px, calc((100svh - 140px) * 16 / 9)); margin-inline: auto; }
+.shot-frames .line--pair { max-width: min(1024px, calc((100svh - 140px) * 16 / 9 + 24px)); }
+.shot-frames .line:not(.line--pair) .frame { aspect-ratio: 16 / 9; background: #F5F5F5; }
+.shot-frames .line:not(.line--pair) .frame :is(img, video) { object-fit: contain; }
 /* guide layout: an opening line, the goal in large type, then "how I did it" as a numbered contents list */
 .shot-lead { font-size: 20px; line-height: 32px; text-wrap: pretty; }
 .shot-kicker { display: block; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
@@ -443,6 +446,7 @@ html.lenis, html.lenis body { height: auto; }
   .shot-frames { gap: 40px; margin-top: 40px; }
   .shot-frames .line { gap: 16px; }
   .shot-frames .line, .shot-frames .line--pair { max-width: none; }
+  .shot-frames .line:not(.line--pair) .frame { aspect-ratio: var(--ar, 16 / 9); }
   .shot-group { margin: 24px auto -12px; }
   .shot-sec { font-size: 26px; line-height: 32px; }
   .shot-goal-text { font-size: 24px; line-height: 31px; }
