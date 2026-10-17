@@ -75,7 +75,7 @@ window.SITE = {
         [19],
         { title: "Add expense", text: "Type the amount, pick a category, done. A little coin burst makes it feel like a win." },
         [1, 2], [3],
-        { title: "Who owes whom", text: "One tap shows who owes what, and one button settles the month." },
+        { title: "Who owes whom", text: "Mostly for us: we always joke about who owes who, so now the app keeps score. One tap shows it, one button settles the month." },
         [14, 15],
         { title: "Empty states", text: "An empty month gets a piggy bank with some attitude, not a blank screen." },
         [4, 5], [6],
