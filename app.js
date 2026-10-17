@@ -510,7 +510,9 @@
     const title = `${p.name} · ${p.kind} — ${S.name}`;
     const frame = (idx) => {
       const m = p.media[idx];
-      return `<figure class="frame" style="--ar:${m.w} / ${m.h}">${media(m, p.tint)}</figure>`;
+      const fig = `<figure class="frame" style="--ar:${m.w} / ${m.h}">${media(m, p.tint)}</figure>`;
+      // a frame with a cap gets one short line under it, saying what you're looking at
+      return m.cap ? `<div class="fig">${fig}<p class="fig-cap">${esc(m.cap)}</p></div>` : fig;
     };
     // an array in lines is a row of one or two frames; anything else opens a numbered step: a headline that
     // tells the story on its own, a short line of why underneath, then the visuals

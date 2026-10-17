@@ -222,6 +222,8 @@ p, h1 { margin: 0; }
 .line { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
 .line--pair { grid-template-columns: 1fr 1fr; }
 .line--pair .frame { aspect-ratio: 8 / 9; }
+.fig { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.fig-cap { margin: 0; font-size: 15px; line-height: 22px; color: var(--mute); text-wrap: pretty; }
 .next {
   display: inline-flex;
   gap: 6px;

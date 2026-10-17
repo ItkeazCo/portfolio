@@ -46,35 +46,35 @@ window.SITE = {
       media: [
         { src: "media/homie/v00-funnel.webm", poster: "media/homie/v00-funnel.jpg", w: 1920, h: 1080, video: true },
         { src: "media/homie/f05-amount.jpg", w: 1920, h: 2160 },
-        { src: "media/homie/v07-approve.webm", poster: "media/homie/v07-approve.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v07-approve.webm", poster: "media/homie/v07-approve.jpg", w: 1200, h: 1350, video: true, cap: "The confirmation, with the amount." },
         { src: "media/homie/f04-flow.jpg", w: 3840, h: 2160 },
-        { src: "media/homie/v08-empty.webm", poster: "media/homie/v08-empty.jpg", w: 1200, h: 1350, video: true },
-        { src: "media/homie/v09-piggy.webm", poster: "media/homie/v09-piggy.jpg", w: 1200, h: 1350, video: true },
-        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160 },
+        { src: "media/homie/v08-empty.webm", poster: "media/homie/v08-empty.jpg", w: 1200, h: 1350, video: true, cap: "An empty month in the app." },
+        { src: "media/homie/v09-piggy.webm", poster: "media/homie/v09-piggy.jpg", w: 1200, h: 1350, video: true, cap: "The piggy bank, up close." },
+        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160, cap: "The illustration set." },
         { src: "media/homie/v10-motion-lab.webm", poster: "media/homie/v10-motion-lab.jpg", w: 1920, h: 1080, video: true },
-        { src: "media/homie/sg-color.jpg", w: 3840, h: 2160 },
+        { src: "media/homie/sg-color.jpg", w: 3840, h: 2160, cap: "Deep green and lime, plus one color per category." },
         { src: "media/homie/sg-icons.jpg", w: 1920, h: 2160 },
         { src: "media/homie/sg-type.jpg", w: 1920, h: 2160 },
-        { src: "media/homie/cs-components.jpg", w: 3840, h: 2160 },
+        { src: "media/homie/cs-components.jpg", w: 3840, h: 2160, cap: "Components, documented once and shipped as they are." },
         { src: "media/homie/cs-states.jpg", w: 3840, h: 2160 },
         { src: "media/homie/cs-tokens.jpg", w: 3840, h: 2160 },
         // who owes whom: the settle-up flow and its close-up
-        { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true },
-        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true, cap: "Who owes who, right under the total." },
+        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true, cap: "One button settles the month." },
         // icon set drawn from scratch
-        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160 },
-        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160 },
-        { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160 },
+        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160, cap: "The category icons we drew ourselves, two-tone." },
+        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160, cap: "Interface icons: Tabler, and Lucide in the menu, picked with Grok." },
+        { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160, cap: "Every category icon sits on the same 32px grid." },
         // the user flow, animated in the style guide's language
-        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true, cap: "The whole app on one map." },
         // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
-        { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true },
+        { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true, cap: "Motion Lab: drag a curve, the animation changes live." },
         // the category breakdown: list, then the ring chart
-        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true, cap: "The month by category: a list, then a ring." },
         // the menu's "download the month", then the spreadsheet it makes
-        { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true },
+        { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true, cap: "Download the month and send it on." },
         // the winged coin on its own: the money flying away after a save
-        { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true, cap: "Save, and the money flies away." },
         // where it started: the first prototype next to today's app
         { src: "media/homie/f06-before-after.jpg", w: 1920, h: 1080 },
         // process boards: patterns kept from browsing money apps on Mobbin, and the tone of voice
