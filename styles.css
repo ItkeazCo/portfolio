@@ -256,10 +256,26 @@ p, h1 { margin: 0; }
 .shot-list { margin: 0; padding-left: 1.2em; font-size: 20px; line-height: 32px; }
 .shot-frames { display: flex; flex-direction: column; gap: 72px; margin-top: 72px; }
 .shot-frames .line { gap: 24px; }
+/* guide layout: an opening line, the goal in large type, then "how I did it" as a numbered contents list */
+.shot-lead { font-size: 20px; line-height: 32px; text-wrap: pretty; }
+.shot-kicker { display: block; font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
+.shot-goal { margin-top: 48px; }
+.shot-goal-text { font-size: 30px; line-height: 38px; font-weight: 500; letter-spacing: -.02em; text-wrap: balance; }
+.shot-how { margin-top: 48px; }
+.shot-toc { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--hair); }
+.shot-toc li { border-bottom: 1px solid var(--hair); }
+.shot-toc a { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; font-size: 18px; line-height: 24px; transition: color var(--dur-fast); }
+.shot-toc a::after { content: "↓"; margin-left: auto; color: var(--mute); transition: transform var(--dur-fast) var(--ease-arrive); }
+.shot-toc a:hover::after { transform: translateY(3px); color: var(--ink); }
+.shot-num { font-size: 13px; line-height: 16px; font-weight: 500; letter-spacing: .06em; font-variant-numeric: tabular-nums; color: var(--mute); }
+/* each step: number, a headline that tells the story, one quiet line of why, then the visuals */
+.shot-group { scroll-margin-top: 32px; }
+.shot-group .shot-num { margin-bottom: -4px; }
+.shot-why { font-size: 17px; line-height: 26px; color: var(--mute); text-wrap: pretty; max-width: 36em; }
 /* each section opens with a short group: heading and a few lines, in the text column */
 .shot-group { width: 100%; max-width: var(--text); margin: 56px auto -24px; display: flex; flex-direction: column; gap: 16px; }   /* same 16px title-to-text gap as the intro facts */
 .shot-frames > .shot-group:first-child { margin-top: 0; }
-.shot-sec { margin: 0; font-size: 32px; line-height: 40px; font-weight: 500; letter-spacing: -.02em; }
+.shot-sec { margin: 0; font-size: 34px; line-height: 40px; font-weight: 500; letter-spacing: -.025em; text-wrap: balance; }
 .shot-next {
   display: flex;
   flex-direction: column;
@@ -420,6 +436,9 @@ html.lenis, html.lenis body { height: auto; }
   .shot-frames .line { gap: 16px; }
   .shot-group { margin: 24px auto -12px; }
   .shot-sec { font-size: 26px; line-height: 32px; }
+  .shot-goal-text { font-size: 24px; line-height: 31px; }
+  .shot-toc a { font-size: 16px; padding: 12px 0; }
+  .shot-why { font-size: 16px; line-height: 24px; }
   .about-page__story { font-size: 18px; line-height: 28px; }
   .about-row { grid-template-columns: minmax(0, 1fr); gap: 12px; padding-block: 24px; }
   .about-list { font-size: 18px; line-height: 28px; }
