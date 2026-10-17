@@ -80,6 +80,8 @@ window.SITE = {
         // process boards: patterns kept from browsing money apps on Mobbin, and the tone of voice
         { src: "media/homie/f07-patterns.jpg", w: 1920, h: 1080 },
         { src: "media/homie/f08-voice.jpg", w: 1920, h: 1080 },
+        // how the tools connect: Grok → Figma → Claude, built in once
+        { src: "media/homie/v18-tools.webm", poster: "media/homie/v18-tools.jpg", w: 1920, h: 1080, video: true, once: true, cap: "Grok shaped the voice and picked icons, Figma held the icons and system, Claude built the app from them." },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -93,7 +95,7 @@ window.SITE = {
         { title: "Refine", text: "Frames from Pinterest for more character, then refining it and sharpening the messages." },
         [26],
         { title: "Visual language, with Grok", text: "A Grok bot, and apps that feel friendly and light like Bit, shaped the colors, icons, illustrations and motion." },
-        [8], [16], [17, 18], [6], [4, 5], [20],
+        [27], [8], [16], [17, 18], [6], [4, 5], [20],
         { title: "A full design system in Figma", text: "What's documented is what ships, and Groceries is built on it too." },
         [11],
       ],
