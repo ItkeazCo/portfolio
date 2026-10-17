@@ -120,9 +120,13 @@ window.SITE = {
         { src: "media/shop/f03-cart.jpg", w: 1920, h: 2160 },
         { src: "media/shop/f04-flow.jpg", w: 3840, h: 2160 },
         { src: "media/shop/sg-icons3d.jpg", w: 3840, h: 2160 },
+        // the user flow, animated in the Homie style guide's language
+        { src: "media/shop/v05-userflow.webm", poster: "media/shop/v05-userflow.jpg", w: 1920, h: 1080, video: true },
       ],
       hero: 0,
       lines: [
+        { title: "User flow", text: "The whole trip in one picture: pick a day, fill the list, shop together." },
+        [9],
         { title: "Plan the trip", text: "Pick the day you're shopping, and the list is ready." },
         [1, 2],
         { title: "Fill from the catalog", text: "No typing. Tap a picture to add it." },
@@ -133,7 +137,7 @@ window.SITE = {
         [8],
       ],
       shotTitle: "Groceries · Shared Shopping List, built on Homie",
-      reel: [0, 1, 3, 5, 8],   // the card's short reel on the home page: media indexes, in order
+      reel: [0, 9, 1, 3, 5, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "Scope", value: "Product, UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
