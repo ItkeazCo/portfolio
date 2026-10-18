@@ -105,7 +105,7 @@ window.SITE = {
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 21, 20, 29],
+      reel: [2, 0, 21, 20, 29],
       // small project details under the title: label / value
       meta: [
         { label: "What I did", value: "UI, design system, motion" },
