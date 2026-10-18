@@ -70,7 +70,7 @@ window.SITE = {
         // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
         { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true, cap: "Motion Lab: drag a curve, the animation changes live." },
         // the category breakdown: list, then the ring chart
-        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true, cap: "The month by category: a list, then a ring." },
+        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true, cap: "Where it went: a ring by category, then each category against its usual month, then one up close over the year." },
         // the menu's "download the month", then the spreadsheet it makes
         { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true, cap: "Download the month and send it on." },
         // the winged coin on its own: the money flying away after a save
@@ -90,7 +90,7 @@ window.SITE = {
       lines: [
         { title: "Plan and prototype", text: "Money apps on Mobbin for the patterns they share, then a rough prototype with Claude, just to feel it." },
         [25], [24],
-        { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes, download the month, settle up." },
+        { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes and how this month compares, download the month, settle up." },
         [19], [23, 2], [21, 15], [22],
         { title: "Build the visual language", text: "I set up a branding bot in Grok and used it to put together a moodboard. Then we refined the language and the brand on the real screens, and built a design system in Figma." },
         [27], [26], [8], [6], [11],
