@@ -90,15 +90,15 @@ window.SITE = {
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        { title: "Plan and prototype", text: "Money apps on Mobbin for the patterns they share, then a rough prototype with Claude, just to feel it." },
+        { title: "Plan and prototype", text: "I started by looking at money apps on Mobbin, to see which patterns keep coming back: one big number up top, a row per bill, one button to add. Then I asked Claude for a rough prototype, just to feel how it would work for the two of us." },
         [25], [24],
-        { title: "Build the screens", text: "Add a bill in a few taps, see where the money goes and how this month compares, download the month, settle up." },
+        { title: "Build the screens", text: "From there I built the screens we actually use. Adding a bill takes a few taps, and when you save, the money flies away. Then you can see where the month went and how it compares to a usual month, download it as a spreadsheet, and settle who owes who." },
         [19], [23, 2], [21, 15], [22],
-        { title: "Build the visual language", text: "I set up a branding bot in Grok and used it to put together a moodboard. Then we refined the language and the brand on the real screens, and built a design system in Figma." },
+        { title: "Build the visual language", text: "I wanted it to feel friendly, not like a bank. So I set up a branding bot in Grok and used it to build a moodboard from Pinterest and from apps that feel light and friendly, like Bit. From that I worked out what I needed: a voice, colors and illustrations. Then we refined it all on the real screens and built a design system in Figma." },
         [27], [26], [8], [6], [11],
-        { title: "Icons, with a Grok brand manager", text: "I drew every category icon myself in Figma, with an icon maker. For the interface we wanted a ready-made library, so I set up a Grok bot as our brand manager, showed it our real menu in three libraries, and picked the one it found closest to our brand." },
+        { title: "Icons, with a Grok brand manager", text: "I looked for icons that feel friendly, at apps like ours and at apps with a friendly interface, and that showed me what I needed: simple shapes with a touch of color. I drew every category icon myself in Figma with an icon maker. For the interface I wanted a ready-made library, so I drew our real menu in three libraries side by side and asked my Grok brand manager which one is closest to our brand." },
         [16], [28], [17, 18],
-        { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Tweaking the timing in code was slow, so I built a small tool to polish it: pick an animation, drag its curves, watch it change live, then save it straight into the app." },
+        { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Getting the timing right in code was slow, so I built a small tool for it: I pick an animation, drag its curves, watch it change live, and save it straight into the app." },
         [7], [20],
       ],
       // shot page (layout after Dribbble's shot pages)
