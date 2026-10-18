@@ -84,6 +84,8 @@ window.SITE = {
         { src: "media/homie/v18-tools.webm", poster: "media/homie/v18-tools.jpg", w: 1920, h: 1080, video: true, once: true, cap: "Grok shaped the voice and picked icons, Figma held the icons and system, Claude built the app from them." },
         // the icon libraries we showed the Grok brand manager: our real menu in Phosphor, Lucide and Tabler
         { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080, cap: "Our real menu, drawn with three libraries side by side, for the Grok bot to compare." },
+        // reel only: the category icons arriving one at a time in a close frame
+        { src: "media/homie/v19-icons.webm", poster: "media/homie/v19-icons.jpg", w: 1440, h: 1080, video: true },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -103,7 +105,7 @@ window.SITE = {
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [0, 21, 20, 17, { i: 16, cut: true }],
+      reel: [0, 21, 20, 29],
       // small project details under the title: label / value
       meta: [
         { label: "What I did", value: "UI, design system, motion" },
