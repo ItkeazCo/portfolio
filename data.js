@@ -112,10 +112,8 @@ window.SITE = {
         { label: "Tools", value: "Claude, Figma, Grok" },
         { label: "Year", value: "2026" },
       ],
-      intro: "An app I made for me and my girlfriend, so we always see what we spend on: groceries, bills, going out.",
-      facts: [
-        { label: "What I wanted", text: "A simple, clear way for my girlfriend and me to track our spending and pull reports." },
-      ],
+      intro: "An app I made for me and my girlfriend: a simple, clear way to track what we spend on, from groceries to bills to going out, and pull reports when we need them.",
+      facts: [],   // the goal now lives in the intro
     },
     {
       slug: "groceries",
