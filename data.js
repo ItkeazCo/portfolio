@@ -96,7 +96,7 @@ window.SITE = {
         [19], [23, 2], [21, 15], [22],
         { title: "Build the visual language", text: "I wanted it to feel friendly, not like a bank. So I set up a branding bot in Grok and used it to build a moodboard from Pinterest and from apps that feel light and friendly, like Bit. From that I worked out what I needed: a voice, colors and illustrations. Then we refined it all on the real screens and built a design system in Figma." },
         [27], [26], [8], [6], [11],
-        { title: "Icons, with a Grok brand manager", text: "I looked for icons that feel friendly, at apps like ours and at apps with a friendly interface, and that showed me what I needed: simple shapes with a touch of color. I drew every category icon myself in Figma with an icon maker. For the interface I wanted a ready-made library, so I drew our real menu in three libraries side by side and asked my Grok brand manager which one is closest to our brand." },
+        { title: "Icons, with a Grok brand manager", text: "I drew every category icon myself in Figma with an icon maker. For the interface I wanted a ready-made library, so I drew our real menu in three libraries side by side and asked my Grok brand manager which one is closest to our brand." },
         [16], [28], [17, 18],
         { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Getting the timing right in code was slow, so I built a small tool for it: I pick an animation, drag its curves, watch it change live, and save it straight into the app." },
         [7], [20],
