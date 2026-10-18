@@ -60,7 +60,7 @@ window.SITE = {
         { src: "media/homie/cs-tokens.jpg", w: 3840, h: 2160 },
         // who owes whom: the settle-up flow and its close-up
         { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true, cap: "Who owes who, right under the total." },
-        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true, cap: "One button settles the month." },
+        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true, cap: "One button settles the month, and the piggy bank says it's closed." },
         // icon set drawn from scratch
         { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160, cap: "The category icons, drawn in Figma, two-tone." },
         { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160, cap: "The result: Tabler for the interface, Lucide for the menu." },
