@@ -233,7 +233,7 @@ window.SITE = {
         // 2 the same skull at three merge levels
         { src: "media/pixy/f02-merge.jpg", w: 1920, h: 1080, cap: "The same skull at Merge 0%, 50% and 100%." },
         // 3 the Merge page with its live preview
-        { src: "media/pixy/f03-tool.jpg", w: 1920, h: 1080, cap: "The Merge page shows a live preview while the slider moves." },
+        { src: "media/pixy/f03-tool.jpg", w: 1920, h: 1080, cap: "Merge adjusts right on the artwork, from a bar at the bottom: Cancel or Done, like Procreate." },
         // 4 time-lapse replay
         { src: "media/pixy/v04-timelapse.webm", poster: "media/pixy/v04-timelapse.jpg", w: 1920, h: 1080, video: true, cap: "Time-lapse replays the drawing cell by cell, and exports it as a video." },
         // 5 export
@@ -245,7 +245,7 @@ window.SITE = {
         // 8 on a phone: drawing the skull with a finger, then Merge from the menu
         { src: "media/pixy/v06-mobile.webm", poster: "media/pixy/v06-mobile.jpg", w: 1200, h: 1350, video: true, cap: "Drawing with a finger, then Merge from the menu." },
         // 9 phone screens: the drawing, the menu, rounded
-        { src: "media/pixy/f07-mobile.jpg", w: 1920, h: 1080, cap: "The drawing, the menu as a full sheet, and the merged skull." },
+        { src: "media/pixy/f07-mobile.jpg", w: 1920, h: 1080, cap: "The drawing, the Merge bar on the artwork, and the merged skull." },
       ],
       hero: 0,
       lines: [
@@ -257,7 +257,7 @@ window.SITE = {
         [4],
         { title: "Take it anywhere", text: "Export a PNG at 1×, 4× or 8×, an SVG, or a WhatsApp sticker with a white cut-out outline." },
         [5],
-        { title: "On the phone too", text: "The same tools on a phone: they move to a bar at the bottom, the menu opens as a full sheet, and every button is sized for a finger." },
+        { title: "On the phone too", text: "The same tools on a phone: they move to a bar at the bottom, settings like Merge adjust right on the artwork, and every button is sized for a finger." },
         [8], [9],
         { title: "A sign-in with a mascot", text: "Sign in with Google, and your drawings are saved to your account. On the way in, Pixy naps until the mouse comes near, then wakes up and starts eating pixels." },
         [6],
