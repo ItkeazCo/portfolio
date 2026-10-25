@@ -263,6 +263,8 @@ p, h1 { margin: 0; }
 .shot-frames .line { width: 100%; max-width: min(1024px, calc((100svh - 140px) * 16 / 9)); margin-inline: auto; }
 /* the cover frame sits in the same column as every other frame */
 .shot-media { width: 100%; max-width: min(1024px, calc((100svh - 140px) * 16 / 9)); margin-inline: auto; }
+/* a tall cover (e.g. a 4:5 video) is sized by the screen height instead, so it fits whole */
+.shot-media .frame { max-width: calc((100svh - 140px) * var(--ar)); margin-inline: auto; }
 .shot-frames .line--pair { max-width: min(1024px, calc((100svh - 140px) * 16 / 9 + 24px)); }
 .shot-frames .line:not(.line--pair) .frame { aspect-ratio: 16 / 9; background: #F5F5F5; }
 .shot-frames .line:not(.line--pair) .frame :is(img, video) { object-fit: contain; }

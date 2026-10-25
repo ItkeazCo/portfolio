@@ -226,31 +226,41 @@ window.SITE = {
       text: "A small tool for drawing pixel icons on a grid and rounding them into smooth shapes.",
       tint: "#f5f5f5",
       media: [
-        // drawing Pixy, the skull, then Merge 0 → 100% rounds it into one shape
-        { src: "media/pixy/v01-merge.webm", poster: "media/pixy/v01-merge.jpg", w: 1920, h: 1080, video: true },
+        // 0 the intro: the icon grid draws in, the first character builds pixel by pixel, then quick cuts on the beat (4:5)
+        { src: "media/pixy/v05-intro.webm", poster: "media/pixy/v05-intro.jpg", w: 1080, h: 1350, video: true },
+        // 1 symmetry: draw the left half, the right half mirrors; then Merge rounds it
+        { src: "media/pixy/v03-symmetry.webm", poster: "media/pixy/v03-symmetry.jpg", w: 1920, h: 1080, video: true, cap: "Symmetry on: I draw the left half, Pixy mirrors every cell, then Merge rounds it." },
+        // 2 the same skull at three merge levels
         { src: "media/pixy/f02-merge.jpg", w: 1920, h: 1080, cap: "The same skull at Merge 0%, 50% and 100%." },
-        { src: "media/pixy/f03-tool.jpg", w: 1920, h: 1080, cap: "The Canvas panel with Merge at 100%, and the live icon preview at 24 px." },
-        { src: "media/pixy/f04-grid.jpg", w: 1920, h: 1080, cap: "Drawing Pixy row by row on the icon keylines." },
-        { src: "media/pixy/f05-pixy.jpg", w: 1920, h: 1080, cap: "Pixy, the mascot, drawn in Pixy." },
-        // the sign-in screen: Pixy naps, wakes when the mouse comes near, eats pixels and hops
+        // 3 the Merge page with its live preview
+        { src: "media/pixy/f03-tool.jpg", w: 1920, h: 1080, cap: "The Merge page shows a live preview while the slider moves." },
+        // 4 time-lapse replay
+        { src: "media/pixy/v04-timelapse.webm", poster: "media/pixy/v04-timelapse.jpg", w: 1920, h: 1080, video: true, cap: "Time-lapse replays the drawing cell by cell, and exports it as a video." },
+        // 5 export
+        { src: "media/pixy/f06-export.jpg", w: 1920, h: 1080, cap: "Export a PNG, an SVG, or a WhatsApp sticker." },
+        // 6 sign-in
         { src: "media/pixy/v02-signin.webm", poster: "media/pixy/v02-signin.jpg", w: 1920, h: 1080, video: true, cap: "Pixy naps until the mouse comes near, then wakes up and eats pixels." },
+        // 7 the mascot
+        { src: "media/pixy/f05-pixy.jpg", w: 1920, h: 1080, cap: "Pixy, the mascot, drawn in Pixy." },
       ],
       hero: 0,
       lines: [
-        { title: "Draw on the icon grid", text: "A pixel canvas with Material's icon keylines, so every icon I draw sits on the same grid and carries the same weight. Brush, fill, eraser and eyedropper, like in Procreate." },
-        [3],
-        { title: "Merge pixels into shapes", text: "One slider rounds the pixels: the higher it goes, the more the corners round and touching cells join into one smooth shape. The SVG export uses the same paths, so what I see is what I get." },
+        { title: "Draw half, get the whole", text: "Turn on symmetry and I only draw one side: every cell is mirrored to the other. Brush, fill, eraser and eyedropper, like in Procreate." },
         [1],
-        { title: "See it at real size", text: "A small floating preview shows the icon at 16, 24 or 32 px while I draw, with the merge applied." },
-        [2],
-        { title: "A sign-in with a mascot", text: "Sign in with Google, and your drawings are saved to your account. On the way in, Pixy naps until the mouse comes near, then wakes up and starts eating pixels." },
-        [5],
-        { title: "Built in Claude Code, on Graphite", text: "I built it in Claude Code, and every control comes from Graphite, my design system." },
+        { title: "Merge pixels into shapes", text: "One slider rounds the pixels: the higher it goes, the more the corners round and touching cells join into one smooth shape. The SVG export uses the same paths, so what I see is what I get." },
+        [2], [3],
+        { title: "Watch it build", text: "Time-lapse replays a drawing cell by cell, like Procreate, and saves it as a video to share." },
         [4],
+        { title: "Take it anywhere", text: "Export a PNG at 1×, 4× or 8×, an SVG, or a WhatsApp sticker with a white cut-out outline." },
+        [5],
+        { title: "A sign-in with a mascot", text: "Sign in with Google, and your drawings are saved to your account. On the way in, Pixy naps until the mouse comes near, then wakes up and starts eating pixels." },
+        [6],
+        { title: "Built in Claude Code, on Graphite", text: "I built it in Claude Code, and every control comes from Graphite, my design system." },
+        [7],
       ],
       shotTitle: "Pixy",
       subtitle: "Draw tiny pixel icons.",
-      reel: [0, 5, 1],
+      reel: [0, 1, 4],
       meta: [
         { label: "What I did", value: "Design, code" },
         { label: "Tools", value: "Claude Code, Graphite, Supabase" },
@@ -258,45 +268,6 @@ window.SITE = {
       ],
       intro: "A small tool I made for drawing icons pixel by pixel, then merging the pixels into smooth shapes I can export as SVG.",
       facts: [],
-    },
-    {
-      slug: "project-two",
-      name: "Project Two",
-      kind: "Contemporary art auction platform",
-      title: "A one-line headline for the project.",
-      text: "Two or three sentences on what the project was, what you did and why it mattered.",
-      tint: "#8f9a92",
-      media: [
-        { w: 16, h: 9 }, { w: 8, h: 9 }, { w: 16, h: 9 }, { w: 16, h: 9 },
-        { w: 8, h: 9 }, { w: 8, h: 9 },
-      ],
-      lines: [[0], [1, 4], [2], [5, 1], [3]],
-    },
-    {
-      slug: "project-three",
-      name: "Project Three",
-      kind: "Media for modern creators",
-      title: "A one-line headline for the project.",
-      text: "Two or three sentences on what the project was, what you did and why it mattered.",
-      tint: "#a39383",
-      media: [
-        { w: 16, h: 9 }, { w: 16, h: 9 }, { w: 8, h: 9 }, { w: 8, h: 9 },
-        { w: 16, h: 9 },
-      ],
-      lines: [[0], [2, 3], [1], [4]],
-    },
-    {
-      slug: "project-four",
-      name: "Project Four",
-      kind: "Threat intelligence before the breach",
-      title: "A one-line headline for the project.",
-      text: "Two or three sentences on what the project was, what you did and why it mattered.",
-      tint: "#7f8590",
-      media: [
-        { w: 16, h: 9 }, { w: 8, h: 9 }, { w: 8, h: 9 }, { w: 16, h: 9 },
-        { w: 16, h: 9 },
-      ],
-      lines: [[0], [1, 2], [3], [4]],
     },
   ],
 };
