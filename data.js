@@ -242,6 +242,10 @@ window.SITE = {
         { src: "media/pixy/v02-signin.webm", poster: "media/pixy/v02-signin.jpg", w: 1920, h: 1080, video: true, cap: "Pixy naps until the mouse comes near, then wakes up and eats pixels." },
         // 7 the mascot
         { src: "media/pixy/f05-pixy.jpg", w: 1920, h: 1080, cap: "Pixy, the mascot, drawn in Pixy." },
+        // 8 on a phone: drawing the skull with a finger, then Merge from the menu
+        { src: "media/pixy/v06-mobile.webm", poster: "media/pixy/v06-mobile.jpg", w: 1200, h: 1350, video: true, cap: "Drawing with a finger, then Merge from the menu." },
+        // 9 phone screens: the drawing, the menu, rounded
+        { src: "media/pixy/f07-mobile.jpg", w: 1920, h: 1080, cap: "The drawing, the menu as a full sheet, and the merged skull." },
       ],
       hero: 0,
       lines: [
@@ -253,6 +257,8 @@ window.SITE = {
         [4],
         { title: "Take it anywhere", text: "Export a PNG at 1×, 4× or 8×, an SVG, or a WhatsApp sticker with a white cut-out outline." },
         [5],
+        { title: "On the phone too", text: "The same tools on a phone: they move to a bar at the bottom, the menu opens as a full sheet, and every button is sized for a finger." },
+        [8], [9],
         { title: "A sign-in with a mascot", text: "Sign in with Google, and your drawings are saved to your account. On the way in, Pixy naps until the mouse comes near, then wakes up and starts eating pixels." },
         [6],
         { title: "Built in Claude Code, on Graphite", text: "I built it in Claude Code, and every control comes from Graphite, my design system." },
