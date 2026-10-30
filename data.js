@@ -86,6 +86,14 @@ window.SITE = {
         { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080, cap: "Our real menu, drawn with three libraries side by side, for the Grok bot to compare." },
         // reel only: the category icons arriving one at a time in a close frame
         { src: "media/homie/v19-icons.webm", poster: "media/homie/v19-icons.jpg", w: 1440, h: 1080, video: true },
+        // 30: bento of the interface animations playing together
+        { src: "media/homie/v20-bento.webm", poster: "media/homie/v20-bento.jpg", w: 1920, h: 1080, video: true },
+        // 31-35: scenes from the piggy animation breakdown film
+        { src: "media/homie/v21-piggy-05.mp4", poster: "media/homie/v21-piggy-05.jpg", w: 1080, h: 1350, video: true, cap: "The pig I drew in Figma, a frame per pose." },
+        { src: "media/homie/v21-piggy-07.mp4", poster: "media/homie/v21-piggy-07.jpg", w: 1080, h: 1350, video: true, cap: "Handing the frames to Claude." },
+        { src: "media/homie/v21-piggy-09.mp4", poster: "media/homie/v21-piggy-09.jpg", w: 1080, h: 1350, video: true, cap: "A few rounds of notes." },
+        { src: "media/homie/v21-piggy-11.mp4", poster: "media/homie/v21-piggy-11.jpg", w: 1080, h: 1350, video: true, cap: "Fine-tuning the curve in Motion Lab." },
+        { src: "media/homie/v21-piggy-12.mp4", poster: "media/homie/v21-piggy-12.jpg", w: 1080, h: 1350, video: true, cap: "And voilà." },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
@@ -100,12 +108,16 @@ window.SITE = {
         [16], [28], [17, 18],
         { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Getting the timing right in code was slow, so I built a small tool for it: I pick an animation, drag its curves, watch it change live, and save it straight into the app." },
         [7], [20],
+        { title: "How the piggy came to life", text: "The piggy you see when we settle up started with a prompt: I asked Claude for an illustration with animation. After that first concept, I drew a finer pig with every pose, so Claude would know exactly what to do, and shared the Figma frames with it. It didn't go as planned at first, so it took a few iterations. Then I fine-tuned the motion in Motion Lab." },
+        [31, 32], [33, 34], [35],
+        { title: "Everything moves", text: "Put together, these are the little animations across the app." },
+        [30],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
-      reel: [2, 0, 21, 20, 29],
+      reel: [2, 0, 30, 21, 20, 29],
       // small project details under the title: label / value
       meta: [
         { label: "What I did", value: "UI, design system, motion" },
