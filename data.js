@@ -46,85 +46,82 @@ window.SITE = {
       media: [
         { src: "media/homie/v00-funnel.webm", poster: "media/homie/v00-funnel.jpg", w: 1920, h: 1080, video: true },
         { src: "media/homie/f05-amount.jpg", w: 1920, h: 2160 },
-        { src: "media/homie/v07-approve.webm", poster: "media/homie/v07-approve.jpg", w: 1200, h: 1350, video: true, cap: "The confirmation, with the amount." },
+        { src: "media/homie/v07-approve.webm", poster: "media/homie/v07-approve.jpg", w: 1200, h: 1350, video: true },
         { src: "media/homie/f04-flow.jpg", w: 3840, h: 2160 },
-        { src: "media/homie/v08-empty.webm", poster: "media/homie/v08-empty.jpg", w: 1200, h: 1350, video: true, cap: "An empty month in the app." },
-        { src: "media/homie/v09-piggy.webm", poster: "media/homie/v09-piggy.jpg", w: 1200, h: 1350, video: true, cap: "The piggy bank, up close." },
-        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160, cap: "Illustrations I drew in Figma, then animated with Claude." },
-        { src: "media/homie/v10-motion-lab.webm", poster: "media/homie/v10-motion-lab.jpg", w: 1920, h: 1080, video: true, cap: "The whole lab: every animation in the app, its timeline and its curves." },
-        { src: "media/homie/sg-color.jpg", w: 3840, h: 2160, cap: "Deep green and lime, plus one color per category." },
+        { src: "media/homie/v08-empty.webm", poster: "media/homie/v08-empty.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v09-piggy.webm", poster: "media/homie/v09-piggy.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/sg-illustrations.jpg", w: 3840, h: 2160 },
+        { src: "media/homie/v10-motion-lab.webm", poster: "media/homie/v10-motion-lab.jpg", w: 1920, h: 1080, video: true },
+        { src: "media/homie/sg-color.jpg", w: 3840, h: 2160 },
         { src: "media/homie/sg-icons.jpg", w: 1920, h: 2160 },
         { src: "media/homie/sg-type.jpg", w: 1920, h: 2160 },
-        { src: "media/homie/cs-components.jpg", w: 3840, h: 2160, cap: "Components, documented once and shipped as they are." },
+        { src: "media/homie/cs-components.jpg", w: 3840, h: 2160 },
         { src: "media/homie/cs-states.jpg", w: 3840, h: 2160 },
         { src: "media/homie/cs-tokens.jpg", w: 3840, h: 2160 },
         // who owes whom: the settle-up flow and its close-up
-        { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true, cap: "Who owes who, right under the total." },
-        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true, cap: "One button settles the month, and the piggy bank says it's closed." },
+        { src: "media/homie/v11-owe.webm", poster: "media/homie/v11-owe.jpg", w: 1200, h: 1350, video: true },
+        { src: "media/homie/v12-settle.webm", poster: "media/homie/v12-settle.jpg", w: 1200, h: 1350, video: true },
         // icon set drawn from scratch
-        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160, cap: "The category icons, drawn in Figma, two-tone." },
-        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160, cap: "The result: Tabler for the interface, Lucide for the menu." },
-        { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160, cap: "Every category icon sits on the same 32px grid." },
+        { src: "media/homie/sg-iconset-cat.jpg", w: 3840, h: 2160 },
+        { src: "media/homie/sg-iconset-ui.jpg", w: 1920, h: 2160 },
+        { src: "media/homie/sg-iconset-grid.jpg", w: 1920, h: 2160 },
         // the user flow, animated in the style guide's language
-        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true, cap: "The whole app on one map." },
+        { src: "media/homie/v13-userflow.webm", poster: "media/homie/v13-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
         // Motion Lab close-up: dragging the bezier handles, then the animation playing with the new curve
-        { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true, cap: "Motion Lab: drag a curve, the animation changes live." },
+        { src: "media/homie/v14-lab-curves.webm", poster: "media/homie/v14-lab-curves.jpg", w: 1920, h: 1080, video: true },
         // the category breakdown: list, then the ring chart
-        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true, cap: "Where it went: a ring by category, then each category against its usual month, then one up close over the year." },
+        { src: "media/homie/v15-breakdown.webm", poster: "media/homie/v15-breakdown.jpg", w: 1200, h: 1350, video: true },
         // the menu's "download the month", then the spreadsheet it makes
-        { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true, cap: "Download the month and send it on." },
+        { src: "media/homie/v16-report.webm", poster: "media/homie/v16-report.jpg", w: 1920, h: 1080, video: true },
         // the winged coin on its own: the money flying away after a save
-        { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true, cap: "Save, and the money flies away." },
+        { src: "media/homie/v17-coin.webm", poster: "media/homie/v17-coin.jpg", w: 1200, h: 1350, video: true },
         // where it started: the first prototype next to today's app
         { src: "media/homie/f06-before-after.jpg", w: 1920, h: 1080 },
         // process boards: patterns kept from browsing money apps on Mobbin, and the tone of voice
         { src: "media/homie/f07-patterns.jpg", w: 1920, h: 1080 },
         { src: "media/homie/f08-voice.jpg", w: 1920, h: 1080 },
         // how the tools connect: Grok → Figma → Claude, built in once
-        { src: "media/homie/v18-tools.webm", poster: "media/homie/v18-tools.jpg", w: 1920, h: 1080, video: true, once: true, cap: "Grok shaped the voice and picked icons, Figma held the icons and system, Claude built the app from them." },
+        { src: "media/homie/v18-tools.webm", poster: "media/homie/v18-tools.jpg", w: 1920, h: 1080, video: true, once: true },
         // the icon libraries we showed the Grok brand manager: our real menu in Phosphor, Lucide and Tabler
-        { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080, cap: "Our real menu, drawn with three libraries side by side, for the Grok bot to compare." },
+        { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080 },
         // reel only: the category icons arriving one at a time in a close frame
         { src: "media/homie/v19-icons.webm", poster: "media/homie/v19-icons.jpg", w: 1440, h: 1080, video: true },
         // 30: bento of the animations the app plays (same list and timing as the app reel)
         { src: "media/homie/v22-bento.webm", poster: "media/homie/v22-bento.jpg", w: 1920, h: 1080, video: true },
         // 31-35: scenes from the piggy animation breakdown film
-        { src: "media/homie/v21-piggy-05.mp4", poster: "media/homie/v21-piggy-05.jpg", w: 1080, h: 1350, video: true, cap: "The pig I drew in Figma, a frame per pose." },
-        { src: "media/homie/v21-piggy-08.mp4", poster: "media/homie/v21-piggy-08.jpg", w: 1080, h: 1350, video: true, cap: "Handing the frames to Claude." },
-        { src: "media/homie/v21-piggy-10.mp4", poster: "media/homie/v21-piggy-10.jpg", w: 1080, h: 1350, video: true, cap: "A few rounds of notes." },
-        { src: "media/homie/v21-piggy-12.mp4", poster: "media/homie/v21-piggy-12.jpg", w: 1080, h: 1350, video: true, cap: "Fine-tuning the curve in Motion Lab." },
-        { src: "media/homie/v21-piggy-13.mp4", poster: "media/homie/v21-piggy-13.jpg", w: 1080, h: 1350, video: true, cap: "And voilà." },
+        { src: "media/homie/v21-piggy-05.mp4", poster: "media/homie/v21-piggy-05.jpg", w: 1080, h: 1350, video: true },
+        { src: "media/homie/v21-piggy-08.mp4", poster: "media/homie/v21-piggy-08.jpg", w: 1080, h: 1350, video: true },
+        { src: "media/homie/v21-piggy-10.mp4", poster: "media/homie/v21-piggy-10.jpg", w: 1080, h: 1350, video: true },
+        { src: "media/homie/v21-piggy-12.mp4", poster: "media/homie/v21-piggy-12.jpg", w: 1080, h: 1350, video: true },
+        { src: "media/homie/v21-piggy-13.mp4", poster: "media/homie/v21-piggy-13.jpg", w: 1080, h: 1350, video: true },
+        // 36-40: storyboard clips, visuals only, each plays once
+        { src: "media/homie/v23-patterns.webm", poster: "media/homie/v23-patterns.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v24-iterate.webm", poster: "media/homie/v24-iterate.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v25-voice.webm", poster: "media/homie/v25-voice.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v26-color.webm", poster: "media/homie/v26-color.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v28-userflow.webm", poster: "media/homie/v28-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
       ],
-      hero: 0,
+      hero: null,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        { title: "Plan and prototype", text: "I started by looking at money apps on Mobbin, to see which patterns keep coming back: one big number up top, a row per bill, one button to add. Then I asked Claude for a rough prototype, just to feel how it would work for the two of us." },
-        [25], [24],
-        { title: "Build the screens", text: "From there I built the screens we actually use. Adding a bill takes a few taps, and when you save, the money flies away. Then you can see where the month went and how it compares to a usual month, download it as a spreadsheet, and settle who owes who." },
-        [19], [23, 2], [21, 15], [22],
-        { title: "Build the visual language", text: "I wanted it to feel friendly, not like a bank. So I set up a branding bot in Grok and used it to build a moodboard from Pinterest and from apps that feel light and friendly, like Bit. From that I worked out what I needed: a voice, colors and illustrations. Then we refined it all on the real screens and built a design system in Figma." },
-        [27], [26], [8], [6], [11],
-        { title: "Icons, with a Grok brand manager", text: "I drew every category icon myself in Figma with an icon maker. For the interface I wanted a ready-made library, so I drew our real menu in three libraries side by side and asked my Grok brand manager which one is closest to our brand." },
-        [16], [28], [17, 18],
-        { title: "Motion Lab", text: "I drew the illustrations in Figma and animated them with Claude. Getting the timing right in code was slow, so I built a small tool for it: I pick an animation, drag its curves, watch it change live, and save it straight into the app." },
-        [7], [20],
-        { title: "How the piggy came to life", text: "The piggy you see when we settle up started with a prompt: I asked Claude for an illustration with animation. After that first concept, I drew a finer pig with every pose, so Claude would know exactly what to do, and shared the Figma frames with it. It didn't go as planned at first, so it took a few iterations. Then I fine-tuned the motion in Motion Lab." },
-        [31, 32], [33, 34], [35],
-        { title: "Everything moves", text: "Put together, these are the little animations across the app." },
-        [30],
+        [0], [15],
+        { title: "Idea", text: "Everything the app does, on one map." },
+        [40],
+        { title: "Research", text: "I looked at money apps on Mobbin and kept the patterns that repeat." },
+        [36],
+        { title: "Iterations", text: "A rough prototype with Claude, then refining it on the real screens." },
+        [37],
+        { title: "Visual language", text: "A branding bot in Grok helped me shape the voice and colors. I drew the icons myself in Figma." },
+        [38], [39], [29],
+        { title: "Interaction", text: "I drew the illustrations in Figma, animated them with Claude, and polished the timing in Motion Lab." },
+        [31, 33], [20], [30],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
       reel: [2, 0, 30, 21, 20, 29],
-      // small project details under the title: label / value
-      meta: [
-        { label: "What I did", value: "UI, design system, motion" },
-        { label: "Tools", value: "Claude, Figma, Grok" },
-        { label: "Year", value: "2026" },
-      ],
-      intro: "An app I made for me and my girlfriend: a simple, clear way to track what we spend on, from groceries to bills to going out, and pull reports when we need them.",
+      intro: "I wanted my girlfriend and me to track what we spend and pull reports, in a simple, clear way.",
       facts: [],   // the goal now lives in the intro
     },
     {
