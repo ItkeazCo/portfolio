@@ -291,15 +291,17 @@ p, h1 { margin: 0; }
 .shot-group { width: 100%; max-width: var(--text); margin: 56px auto -24px; display: flex; flex-direction: column; gap: 16px; }   /* same 16px title-to-text gap as the intro facts */
 .shot-frames > .shot-group:first-child { margin-top: 0; }
 .shot-sec { margin: 0; font-size: 34px; line-height: 40px; font-weight: 500; letter-spacing: -.025em; text-wrap: balance; }
-/* storyboard layout: text and frames share one left edge; rows in a section sit close, sections sit far apart */
-.shot--story { --text: min(1240px, calc((100svh - 60px) * 16 / 9)); }
-.shot--story .shot-frames .line { max-width: var(--text); }
+/* storyboard layout, after Dribbble's shot page: title row on the frame's left edge, then the frame, then the text in a
+   narrower centred column, left-aligned; rows in a section sit close, sections sit far apart */
+.shot--story { --text: 680px; --wide: min(1240px, calc((100svh - 60px) * 16 / 9)); }
+.shot--story .shot-title, .shot--story .shot-subtitle, .shot--story .shot-meta, .shot--story .shot-media, .shot--story .shot-frames .line { max-width: var(--wide); }
 .shot--story .shot-subtitle { margin-bottom: 24px; }
 .shot--story .shot-meta { grid-template-columns: repeat(auto-fit, minmax(140px, 240px)); margin-top: 0; margin-bottom: 32px; }
-.shot--story .shot-copy { padding-block: 0; }
-.shot--story .shot-lead, .shot--story .shot-why { max-width: 520px; }
+.shot--story .shot-media .frame { max-width: none; }
+.shot--story .shot-copy { padding-block: 48px 0; }
 .shot--story .shot-frames { gap: 24px; margin-top: 48px; }
 .shot--story .shot-group { margin: 96px auto 8px; }
+.shot--story .shot-why { max-width: none; }
 .shot-next {
   display: flex;
   flex-direction: column;
@@ -454,7 +456,7 @@ html.lenis, html.lenis body { height: auto; }
   .line--pair { grid-template-columns: 1fr; }
   .line--pair .frame { aspect-ratio: var(--ar, 16 / 9); }
   .shot-copy { padding-block: 40px 8px; }
-  .shot--story .shot-copy { padding-block: 0; }
+  .shot--story .shot-copy { padding-block: 32px 0; }
   .shot--story .shot-group { margin-top: 64px; }
   .shot--story .shot-frames { gap: 16px; margin-top: 32px; }
   .shot-p, .shot-list { font-size: 18px; line-height: 28px; }

@@ -104,11 +104,11 @@ window.SITE = {
         { src: "media/homie/v29-tools.webm", poster: "media/homie/v29-tools.jpg", w: 1920, h: 1080, video: true, once: true },
         { src: "media/homie/v27-icon-pick.webm", poster: "media/homie/v27-icon-pick.jpg", w: 1920, h: 1080, video: true, once: true },
       ],
-      hero: null,
+      hero: 0,
       story: true,   // storyboard layout
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
-        [0], [15],
+        [15],
         { title: "Idea", text: "Everything the app does, on one map." },
         [40],
         { title: "Research", text: "I looked at money apps on Mobbin and kept the patterns that repeat." },
