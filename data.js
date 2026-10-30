@@ -90,10 +90,10 @@ window.SITE = {
         { src: "media/homie/v20-bento.webm", poster: "media/homie/v20-bento.jpg", w: 1920, h: 1080, video: true },
         // 31-35: scenes from the piggy animation breakdown film
         { src: "media/homie/v21-piggy-05.mp4", poster: "media/homie/v21-piggy-05.jpg", w: 1080, h: 1350, video: true, cap: "The pig I drew in Figma, a frame per pose." },
-        { src: "media/homie/v21-piggy-07.mp4", poster: "media/homie/v21-piggy-07.jpg", w: 1080, h: 1350, video: true, cap: "Handing the frames to Claude." },
-        { src: "media/homie/v21-piggy-09.mp4", poster: "media/homie/v21-piggy-09.jpg", w: 1080, h: 1350, video: true, cap: "A few rounds of notes." },
-        { src: "media/homie/v21-piggy-11.mp4", poster: "media/homie/v21-piggy-11.jpg", w: 1080, h: 1350, video: true, cap: "Fine-tuning the curve in Motion Lab." },
-        { src: "media/homie/v21-piggy-12.mp4", poster: "media/homie/v21-piggy-12.jpg", w: 1080, h: 1350, video: true, cap: "And voilà." },
+        { src: "media/homie/v21-piggy-08.mp4", poster: "media/homie/v21-piggy-08.jpg", w: 1080, h: 1350, video: true, cap: "Handing the frames to Claude." },
+        { src: "media/homie/v21-piggy-10.mp4", poster: "media/homie/v21-piggy-10.jpg", w: 1080, h: 1350, video: true, cap: "A few rounds of notes." },
+        { src: "media/homie/v21-piggy-12.mp4", poster: "media/homie/v21-piggy-12.jpg", w: 1080, h: 1350, video: true, cap: "Fine-tuning the curve in Motion Lab." },
+        { src: "media/homie/v21-piggy-13.mp4", poster: "media/homie/v21-piggy-13.jpg", w: 1080, h: 1350, video: true, cap: "And voilà." },
       ],
       hero: 0,
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
