@@ -296,7 +296,7 @@ p, h1 { margin: 0; }
 .shot--story .shot-subtitle { margin-bottom: 24px; }
 .shot--story .shot-meta { grid-template-columns: repeat(auto-fit, minmax(140px, 240px)); margin-top: 0; margin-bottom: 32px; }
 .shot--story .shot-copy { padding-block: 0; }
-.shot--story .shot-lead { max-width: 680px; }
+.shot--story .shot-lead, .shot--story .shot-why { max-width: 520px; }
 .shot--story .shot-frames { gap: 24px; margin-top: 48px; }
 .shot--story .shot-group { margin: 96px auto 8px; }
 .shot-next {
