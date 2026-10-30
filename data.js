@@ -128,7 +128,7 @@ window.SITE = {
       intro: "I tried a few different tools and they all failed. So I wanted an easy, comfortable, fast way for my girlfriend and me to add expenses.",
       // small project details under the title: label / value
       meta: [
-        { label: "What I did", value: "UI, design system, motion" },
+        { label: "Role", value: "UI, design system, motion" },
         { label: "Year", value: "2026" },
       ],
       facts: [],   // the goal now lives in the intro
@@ -170,7 +170,7 @@ window.SITE = {
       subtitle: "A shopping list for two.",   // one short line under the title
       reel: [0, 3, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
-        { label: "What I did", value: "UI, motion" },
+        { label: "Role", value: "UI, motion" },
         { label: "Tools", value: "HTML, CSS, JS" },
         { label: "Year", value: "2026" },
       ],
@@ -227,7 +227,7 @@ window.SITE = {
       subtitle: "A design system you can feel.",   // one short line under the title
       reel: [0, 2, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
-        { label: "What I did", value: "Design system, docs" },
+        { label: "Role", value: "Design system, docs" },
         { label: "Tools", value: "CSS tokens, JS" },
         { label: "Year", value: "2026" },
       ],
@@ -288,7 +288,7 @@ window.SITE = {
       subtitle: "Draw tiny pixel icons.",
       reel: [0, 1, 4],
       meta: [
-        { label: "What I did", value: "Design, code" },
+        { label: "Role", value: "Design, code" },
         { label: "Tools", value: "Claude Code, Graphite, Supabase" },
         { label: "Year", value: "2026" },
       ],
