@@ -86,8 +86,8 @@ window.SITE = {
         { src: "media/homie/f09-icon-options.jpg", w: 1920, h: 1080, cap: "Our real menu, drawn with three libraries side by side, for the Grok bot to compare." },
         // reel only: the category icons arriving one at a time in a close frame
         { src: "media/homie/v19-icons.webm", poster: "media/homie/v19-icons.jpg", w: 1440, h: 1080, video: true },
-        // 30: bento of the interface animations playing together
-        { src: "media/homie/v20-bento.webm", poster: "media/homie/v20-bento.jpg", w: 1920, h: 1080, video: true },
+        // 30: bento of the animations the app plays (same list and timing as the app reel)
+        { src: "media/homie/v22-bento.webm", poster: "media/homie/v22-bento.jpg", w: 1920, h: 1080, video: true },
         // 31-35: scenes from the piggy animation breakdown film
         { src: "media/homie/v21-piggy-05.mp4", poster: "media/homie/v21-piggy-05.jpg", w: 1080, h: 1350, video: true, cap: "The pig I drew in Figma, a frame per pose." },
         { src: "media/homie/v21-piggy-08.mp4", poster: "media/homie/v21-piggy-08.jpg", w: 1080, h: 1350, video: true, cap: "Handing the frames to Claude." },
