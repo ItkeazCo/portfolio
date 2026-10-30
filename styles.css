@@ -300,8 +300,14 @@ p, h1 { margin: 0; }
 .shot--story .shot-media .frame { max-width: none; }
 .shot--story .shot-copy { padding-block: 48px 0; }
 .shot--story .shot-frames { gap: 24px; margin-top: 48px; }
-.shot--story .shot-group { margin: 96px auto 8px; }
-.shot--story .shot-why { max-width: none; }
+/* a section opens with big text in the centred column; its title is a small label on the frame's left edge */
+.shot--story .shot-lead, .shot--story .shot-why { max-width: none; font-size: 28px; line-height: 38px; letter-spacing: -.01em; color: var(--ink); }
+.shot--story .shot-group { max-width: var(--wide); margin: 96px auto 8px; display: grid; grid-template-columns: 1fr minmax(0, var(--text)) 1fr; column-gap: 24px; align-items: baseline; }
+.shot--story .shot-sec { font-size: 15px; line-height: 20px; letter-spacing: 0; }
+@media (max-width: 1000px) {
+  .shot--story .shot-group { display: flex; gap: 8px; }
+  .shot--story .shot-lead, .shot--story .shot-why { font-size: 22px; line-height: 30px; }
+}
 .shot-next {
   display: flex;
   flex-direction: column;
