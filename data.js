@@ -100,8 +100,12 @@ window.SITE = {
         { src: "media/homie/v25-voice.webm", poster: "media/homie/v25-voice.jpg", w: 1920, h: 1080, video: true, once: true },
         { src: "media/homie/v26-color.webm", poster: "media/homie/v26-color.jpg", w: 1920, h: 1080, video: true, once: true },
         { src: "media/homie/v28-userflow.webm", poster: "media/homie/v28-userflow.jpg", w: 1920, h: 1080, video: true, once: true },
+        // 41-42: the tools diagram and the interface icon pick
+        { src: "media/homie/v29-tools.webm", poster: "media/homie/v29-tools.jpg", w: 1920, h: 1080, video: true, once: true },
+        { src: "media/homie/v27-icon-pick.webm", poster: "media/homie/v27-icon-pick.jpg", w: 1920, h: 1080, video: true, once: true },
       ],
       hero: null,
+      story: true,   // storyboard layout
       // a { title, text } entry opens a section with a short write-up; arrays are rows of frames
       lines: [
         [0], [15],
@@ -109,12 +113,12 @@ window.SITE = {
         [40],
         { title: "Research", text: "I looked at money apps on Mobbin and kept the patterns that repeat." },
         [36],
-        { title: "Iterations", text: "A rough prototype with Claude, then refining it on the real screens." },
-        [37],
-        { title: "Visual language", text: "A branding bot in Grok helped me shape the voice and colors. I drew the icons myself in Figma." },
-        [38], [39], [29],
+        { title: "Iterations", text: "A rough prototype with Claude, just to feel it. Then frames from Pinterest for more character, and refining the messages on the real screens." },
+        [37], [21, 23], [22],
+        { title: "Visual language", text: "I set up a branding bot in Grok to shape the voice and colors, inspired by friendly apps like Bit, then built a design system in Figma. I drew the category icons myself, and asked the bot which interface library fits us best." },
+        [41], [38], [39], [29], [42],
         { title: "Interaction", text: "I drew the illustrations in Figma, animated them with Claude, and polished the timing in Motion Lab." },
-        [31, 33], [20], [30],
+        [31, 32], [33, 34], [20], [30],
       ],
       // shot page (layout after Dribbble's shot pages)
       shotTitle: "Homie",

@@ -530,7 +530,7 @@
       // a guide: the goal up front, then each step
       const goal = (f) => `<div class="shot-goal"><span class="shot-kicker">${esc(f.label)}</span><p class="shot-goal-text">${esc(f.text)}</p></div>`;
       return { title, slug: p.slug, html: `
-        <article class="shot">
+        <article class="shot${p.story ? " shot--story" : ""}">
           <h1 class="shot-title rise">${esc(p.shotTitle || p.name)}</h1>
           ${p.subtitle ? `<p class="shot-subtitle rise">${esc(p.subtitle)}</p>` : ""}
           ${p.meta ? `<dl class="shot-meta rise">${p.meta.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>` : ""}
