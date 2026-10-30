@@ -258,11 +258,13 @@ window.SITE = {
         { src: "media/pixy/v06-mobile.webm", poster: "media/pixy/v06-mobile.jpg", w: 1200, h: 1350, video: true, cap: "Drawing with a finger, then Merge from the menu." },
         // 9 phone screens: the drawing, the menu, rounded
         { src: "media/pixy/f07-mobile.jpg", w: 1920, h: 1080, cap: "The drawing, the Merge bar on the artwork, and the merged skull." },
+        // 10: artwork drawn in Pixy, shown cell for cell
+        { src: "media/pixy/f08-coin.png", w: 1920, h: 1080, cap: "A shekel coin, drawn in Pixy." },
       ],
       hero: 0,
       lines: [
         { title: "Draw half, get the whole", text: "Turn on symmetry and I only draw one side: every cell is mirrored to the other. Brush, fill, eraser and eyedropper, like in Procreate." },
-        [1],
+        [1], [10],
         { title: "Merge pixels into shapes", text: "One slider rounds the pixels: the higher it goes, the more the corners round and touching cells join into one smooth shape. The SVG export uses the same paths, so what I see is what I get." },
         [2], [3],
         { title: "Watch it build", text: "Time-lapse replays a drawing cell by cell, like Procreate, and saves it as a video to share." },
