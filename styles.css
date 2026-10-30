@@ -286,7 +286,7 @@ p, h1 { margin: 0; }
 /* each step: number, a headline that tells the story, one quiet line of why, then the visuals */
 .shot-group { scroll-margin-top: 32px; }
 .shot-group .shot-num { margin-bottom: -4px; }
-.shot-why { font-size: 17px; line-height: 26px; color: var(--mute); text-wrap: pretty; max-width: 36em; }
+.shot-why { font-size: 17px; line-height: 26px; color: rgba(0, 0, 0, .75); text-wrap: pretty; max-width: 36em; }
 /* each section opens with a short group: heading and a few lines, in the text column */
 .shot-group { width: 100%; max-width: var(--text); margin: 56px auto -24px; display: flex; flex-direction: column; gap: 16px; }   /* same 16px title-to-text gap as the intro facts */
 .shot-frames > .shot-group:first-child { margin-top: 0; }
