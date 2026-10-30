@@ -303,9 +303,10 @@ p, h1 { margin: 0; }
 /* a section opens with big text in the centred column; its title is a small label on the frame's left edge */
 .shot--story .shot-lead, .shot--story .shot-why { max-width: none; font-size: 28px; line-height: 42px; color: var(--ink); }
 .shot--story .shot-group { max-width: var(--wide); margin: 176px auto 32px; display: grid; grid-template-columns: 1fr minmax(0, var(--text)) 1fr; column-gap: 24px; align-items: baseline; }
+.shot--story .shot-copy { max-width: var(--wide); display: grid; grid-template-columns: 1fr minmax(0, var(--text)) 1fr; column-gap: 24px; align-items: baseline; }
 .shot--story .shot-sec { font-size: 15px; line-height: 20px; letter-spacing: 0; }
 @media (max-width: 1000px) {
-  .shot--story .shot-group { display: flex; gap: 8px; }
+  .shot--story .shot-group, .shot--story .shot-copy { display: flex; flex-direction: column; gap: 8px; }
   .shot--story .shot-lead, .shot--story .shot-why { font-size: 22px; line-height: 34px; }
 }
 .shot-next {

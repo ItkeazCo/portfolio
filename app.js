@@ -536,7 +536,7 @@
           ${p.meta ? `<dl class="shot-meta rise">${p.meta.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>` : ""}
           ${p.hero != null ? `<div class="shot-media rise" style="--delay:.05s">${frame(p.hero)}</div>` : ""}
           <div class="shot-copy rise">
-            <p class="shot-lead">${esc(p.intro || p.text)}</p>
+            ${p.introTitle ? `<h2 class="shot-sec">${esc(p.introTitle)}</h2>` : ""}<p class="shot-lead">${esc(p.intro || p.text)}</p>
             ${p.facts.map(goal).join("")}
             
             ${p.link ? `<p class="shot-p"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit website ↗</a></p>` : ""}
