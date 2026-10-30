@@ -171,7 +171,7 @@ window.SITE = {
       reel: [0, 3, 8],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "What I did", value: "UI, motion" },
-        { label: "Tools", value: "HTML, CSS, JS" },
+        { label: "What I used", value: "HTML, CSS, JS" },
         { label: "Year", value: "2026" },
       ],
       intro: "Instead of sending each other messages to build a list, we share one list that's always up to date. And we pick products by seeing them, not from memory.",
@@ -228,7 +228,7 @@ window.SITE = {
       reel: [0, 2, 13, 17],   // the card's short reel on the home page: media indexes, in order
       meta: [
         { label: "What I did", value: "Design system, docs" },
-        { label: "Tools", value: "CSS tokens, JS" },
+        { label: "What I used", value: "CSS tokens, JS" },
         { label: "Year", value: "2026" },
       ],
       intro: "A calm design system for tools you tune by hand.",
@@ -289,7 +289,7 @@ window.SITE = {
       reel: [0, 1, 4],
       meta: [
         { label: "What I did", value: "Design, code" },
-        { label: "Tools", value: "Claude Code, Graphite, Supabase" },
+        { label: "What I used", value: "Claude Code, Graphite, Supabase" },
         { label: "Year", value: "2026" },
       ],
       intro: "A small tool I made for drawing icons pixel by pixel, then merging the pixels into smooth shapes I can export as SVG.",
