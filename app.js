@@ -529,18 +529,19 @@
     if (p.facts) {
       // a guide: the goal up front, then each step
       const goal = (f) => `<div class="shot-goal"><span class="shot-kicker">${esc(f.label)}</span><p class="shot-goal-text">${esc(f.text)}</p></div>`;
+      const metaHtml = p.meta ? `<dl class="shot-meta rise">${p.meta.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>` : "";
+      const heroHtml = p.hero != null ? `<div class="shot-media rise" style="--delay:.05s">${frame(p.hero)}</div>` : "";
+      const copyHtml = `<div class="shot-copy rise">
+            <p class="shot-lead">${esc(p.intro || p.text)}</p>
+            ${p.facts.map(goal).join("")}
+            
+            ${p.link ? `<p class="shot-p"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit website ↗</a></p>` : ""}
+          </div>`;
       return { title, slug: p.slug, html: `
         <article class="shot${p.story ? " shot--story" : ""}">
           <h1 class="shot-title rise">${esc(p.shotTitle || p.name)}</h1>
           ${p.subtitle ? `<p class="shot-subtitle rise">${esc(p.subtitle)}</p>` : ""}
-          ${p.meta ? `<dl class="shot-meta rise">${p.meta.map((m) => `<div><dt>${esc(m.label)}</dt><dd>${esc(m.value)}</dd></div>`).join("")}</dl>` : ""}
-          ${p.hero != null ? `<div class="shot-media rise" style="--delay:.05s">${frame(p.hero)}</div>` : ""}
-          <div class="shot-copy rise">
-            ${p.introTitle ? `<h2 class="shot-sec">${esc(p.introTitle)}</h2>` : ""}<p class="shot-lead">${esc(p.intro || p.text)}</p>
-            ${p.facts.map(goal).join("")}
-            
-            ${p.link ? `<p class="shot-p"><a href="${esc(p.link)}" target="_blank" rel="noopener">Visit website ↗</a></p>` : ""}
-          </div>
+          ${p.story ? `<div class="shot-intro">${metaHtml}${copyHtml}</div>${heroHtml}` : `${metaHtml}${heroHtml}${copyHtml}`}
           <section class="shot-frames">${lines}</section>
           <a class="shot-next rise" href="${projectUrl(next)}" data-slug="${esc(next.slug)}"><span>Next case</span><b>${esc(next.name)}</b></a>
         </article>` };
