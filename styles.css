@@ -292,7 +292,8 @@ p, h1 { margin: 0; }
 .shot-frames > .shot-group:first-child { margin-top: 0; }
 .shot-sec { margin: 0; font-size: 34px; line-height: 40px; font-weight: 500; letter-spacing: -.025em; text-wrap: balance; }
 /* storyboard layout: text and frames share one left edge; rows in a section sit close, sections sit far apart */
-.shot--story { --text: min(1024px, calc((100svh - 140px) * 16 / 9)); }
+.shot--story { --text: min(1240px, calc((100svh - 60px) * 16 / 9)); }
+.shot--story .shot-frames .line { max-width: var(--text); }
 .shot--story .shot-subtitle { margin-bottom: 24px; }
 .shot--story .shot-meta { grid-template-columns: repeat(auto-fit, minmax(140px, 240px)); margin-top: 0; margin-bottom: 32px; }
 .shot--story .shot-copy { padding-block: 0; }
