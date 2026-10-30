@@ -294,6 +294,7 @@ p, h1 { margin: 0; }
 /* storyboard layout: text and frames share one left edge; rows in a section sit close, sections sit far apart */
 .shot--story { --text: min(1024px, calc((100svh - 140px) * 16 / 9)); }
 .shot--story .shot-subtitle { margin-bottom: 24px; }
+.shot--story .shot-meta { grid-template-columns: repeat(auto-fit, minmax(140px, 240px)); margin-top: 0; margin-bottom: 32px; }
 .shot--story .shot-copy { padding-block: 0; }
 .shot--story .shot-lead { max-width: 680px; }
 .shot--story .shot-frames { gap: 24px; margin-top: 48px; }
