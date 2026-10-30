@@ -125,7 +125,7 @@ window.SITE = {
       subtitle: "Where our money goes, at a glance.",   // one short line under the title
       // the card's short reel on the home page: media indexes in order; { i, cut: true } switches instantly instead of sliding
       reel: [2, 0, 30, 21, 20, 29],
-      intro: "I wanted my girlfriend and me to track what we spend and pull reports, in a simple, clear way.",
+      intro: "I tried a few different tools and they all failed. So I wanted an easy, comfortable, fast way for my girlfriend and me to add expenses.",
       // small project details under the title: label / value
       meta: [
         { label: "What I did", value: "UI, design system, motion" },
